@@ -1,0 +1,12 @@
+#IDEA temp folders
+.vc
+.idea
+
+#Other files
+*.sql
+*.bk
+
+#Temp build folders
+build
+cmake-build-*
+
