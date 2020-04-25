@@ -6,9 +6,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --fix-mi
     git zip cron curl cmake wget python llvm libxml2-dev build-essential libssl-dev \
     checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
     libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-dev \
-    && cd /opt && wget http://www.imagemagick.org/download/ImageMagick.tar.gz \
-    && tar -zxf ImageMagick.tar.gz && ImageMagickPath=$(ls | grep 'ImageMagick-') && cd ${ImageMagickPath} \
-    && touch configure && ./configure && make && make install && ldconfig /usr/local/lib && convert --version \
     && cd /var && git clone https://github.com/emscripten-core/emsdk.git emsdk && cd emsdk \
     && ./emsdk install latest \
     && ./emsdk activate latest \
