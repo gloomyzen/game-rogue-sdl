@@ -43,23 +43,22 @@ jobs:
           submodules: recursive
           path: ${{ env.REPO_NAME }}
 
-#      - name: First set up.
-#        shell: bash
-#        run: |
-#          python --version
-#          python --version > CACHE_KEY.txt
-#          echo $MANUAL_CACHING >> CACHE_KEY.txt
-#          if [ "$AUTO_CACHING" == "1" ]; then
-#            thisFile=$REPO_NAME/.github/workflows/linux.yml
-#            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
-#          fi
-#          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
-#          echo ::set-env name=CACHE_KEY::$md5cache
+      - name: First set up.
+        shell: bash
+        run: |
+          emcc -v > CACHE_KEY.txt
+          echo $MANUAL_CACHING >> CACHE_KEY.txt
+          if [ "$AUTO_CACHING" == "1" ]; then
+            thisFile=${{ env.REPO_NAME }}/.github/workflows/linux.yml
+            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
+          fi
+          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
+          echo ::set-env name=CACHE_KEY::$md5cache
 
       - name: Build wasm. 🔧
         shell: bash
         run: |
-          cd $REPO_NAME && mkdir build && cd build \
+          cd ${{ env.REPO_NAME }} && mkdir build && cd build \
           && cmake -DBUILD_TYPE=webassembly ..
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
