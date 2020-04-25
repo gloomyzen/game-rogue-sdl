@@ -1,0 +1,72 @@
+name: Linux
+
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+
+jobs:
+
+  build:
+
+    name: Ubuntu 18.04
+    runs-on: ubuntu-latest
+    container: ubuntu:trusty
+
+    steps:
+      - name: Get repository name.
+        run: echo ::set-env name=REPO_NAME::${GITHUB_REPOSITORY##*/}
+
+      - name: Apt install.
+        shell: bash
+        run: |
+          sudo apt-get update -y
+          sudo apt-get dist-upgrade -y
+          sudo apt-get install -y --fix-missing \
+          git zip cron curl cmake wget python llvm libxml2-dev build-essential libssl-dev software-properties-common \
+          checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
+          libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-2.0-0
+          sudo add-apt-repository ppa:deadsnakes/ppa -y && \
+          sudo apt update && sudo apt-get install -y python3.7 python3-pip && \
+          sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1 && \
+          sudo update-alternatives --config python && \
+          sudo add-apt-repository --remove ppa:deadsnakes/ppa -y
+
+      - name: Clone.
+        uses: actions/checkout@v1
+        with:
+          submodules: recursive
+          path: ${{ env.REPO_NAME }}
+
+#      - name: First set up.
+#        shell: bash
+#        run: |
+#          python --version
+#          python --version > CACHE_KEY.txt
+#          echo $MANUAL_CACHING >> CACHE_KEY.txt
+#          if [ "$AUTO_CACHING" == "1" ]; then
+#            thisFile=$REPO_NAME/.github/workflows/linux.yml
+#            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
+#          fi
+#          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
+#          echo ::set-env name=CACHE_KEY::$md5cache
+
+      - name: Emscripten install.
+        shell: bash
+        run: |
+          python --version
+          pyenv versions
+          which python
+          cd /opt && \
+          git clone https://github.com/emscripten-core/emsdk.git emsdk && \
+          cd /opt/emsdk && \
+          ./emsdk install latest && \
+          ./emsdk activate latest && \
+          source /opt/emsdk/emsdk_env.sh && \
+          echo "source /opt/emsdk/emsdk_env.sh\n" >> /etc/profile && \
+          emcc --version

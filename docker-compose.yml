@@ -1,0 +1,101 @@
+##TODO: add /root/.emscripten_cache/ to volumes
+version: '2'
+services:
+############################################################################
+#   Emcc compiler + node js
+############################################################################
+  ubuntu:
+    container_name: 'ubuntu'
+    build:
+      context: ./
+      dockerfile: ./docker/ubuntu.docker
+    volumes:
+      - ./:/var/www
+    ports:
+      - "35729:35729" # for livereload plugin
+    tty: true
+############################################################################
+#   Nginx for run web application
+############################################################################
+  nginx:
+    container_name: 'nginx'
+    build:
+      context: ./
+      dockerfile: ./docker/nginx.docker
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/ssl:/etc/nginx/ssl
+    ports:
+      - "8080:443"
+############################################################################
+#   Api
+############################################################################
+#  nginx:
+#    container_name: 'nginx'
+#    build:
+#      context: ./
+#      dockerfile: ./docker/nginx.docker
+#    volumes:
+#      - ./:/var/www
+#      - ./docker/nginx/ssl:/etc/nginx/ssl
+#      - ./docker/static:/var/static
+#    ports:
+#      - "8080:443"
+#    links:
+#      - php-fpm
+#  php-fpm:
+#    container_name: 'php-fpm'
+#    build:
+#      context: ./
+#      dockerfile: ./docker/php-fpm.docker
+#    volumes:
+#      - ./:/var/www
+#      - ./docker/static:/var/static
+#    links:
+#      - mysql
+#      - redis
+#    env_file:
+#      - ./docker/app.env
+#  php-cli:
+#    container_name: 'php-cli'
+#    build:
+#      context: ./
+#      dockerfile: ./docker/php-cli.docker
+#    volumes:
+#      - ./:/var/www
+#      - ~/.composer:/root/.composer #fixme нужно добавить глобальный путь для кеша композера в системе
+#      - ./docker/static:/var/static
+#      - ./docker/scripts/symlink.sh:/usr/local/bin/fix_symlink
+#    links:
+#      - mysql
+#      - redis
+#    env_file:
+#      - ./docker/app.env
+#    tty: true
+############################################################################
+#   Common
+############################################################################
+#  mysql:
+#    container_name: 'mysql'
+#    image: mysql:5.7
+#    env_file:
+#      - ./docker/app.env
+#    ports:
+#      - "33061:3306"
+#  redis:
+#    container_name: 'redis'
+#    image: redis:3.0
+#    ports:
+#      - "63791:6379"
+#  node:
+#    container_name: 'node'
+#    build:
+#      context: ./
+#      dockerfile: ./docker/node.docker
+#    volumes:
+#      - ./:/var/www
+#      - ~/.npm_docker_cache:/root/.npm # нужно добавить глобальный путь для кеша npm в системе
+#    ports:
+#      - "35729:35729" # for livereload plugin
+#    tty: true
+#
