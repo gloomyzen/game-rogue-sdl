@@ -37,7 +37,7 @@ jobs:
           checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
           libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-2.0-0
 
-      - name: Clone.
+      - name: Clone. 🛎️
         uses: actions/checkout@v1
         with:
           submodules: recursive
@@ -56,15 +56,14 @@ jobs:
 #          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
 #          echo ::set-env name=CACHE_KEY::$md5cache
 
-#      - name: Emscripten install.
-#        shell: bash
-#        run: |
-#          python --version
-#          cd /opt && \
-#          git clone https://github.com/emscripten-core/emsdk.git emsdk && \
-#          cd /opt/emsdk && \
-#          ./emsdk install latest && \
-#          ./emsdk activate latest && \
-#          source /opt/emsdk/emsdk_env.sh && \
-#          echo "source /opt/emsdk/emsdk_env.sh\n" >> /etc/profile && \
-#          emcc --version
+      - name: Build wasm. 🔧
+        shell: bash
+        run: |
+          cd $REPO_NAME && mkdir build && cd build \
+          && cmake -DBUILD_TYPE=webassembly ..
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build

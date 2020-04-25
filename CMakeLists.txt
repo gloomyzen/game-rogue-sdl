@@ -57,7 +57,7 @@ if(${BUILD_TYPE} STREQUAL webassembly)
     )
     # Copy the favicon.
     configure_file(
-            ${CMAKE_CURRENT_SOURCE_DIR}/resources/img/favicon.ico
+            ${CMAKE_CURRENT_SOURCE_DIR}/resources/stub/favicon.ico
             ${CMAKE_CURRENT_BINARY_DIR}/favicon.ico
     )
 
