@@ -36,6 +36,14 @@ jobs:
           sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1 && \
           sudo update-alternatives --config python && \
           sudo add-apt-repository --remove ppa:deadsnakes/ppa -y
+          cd /opt && \
+          git clone https://github.com/emscripten-core/emsdk.git emsdk && \
+          cd /opt/emsdk && \
+          ./emsdk install latest && \
+          ./emsdk activate latest && \
+          source /opt/emsdk/emsdk_env.sh && \
+          echo "source /opt/emsdk/emsdk_env.sh\n" >> /etc/profile && \
+          emcc --version
 
       - name: Clone.
         uses: actions/checkout@v1
@@ -56,17 +64,15 @@ jobs:
 #          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
 #          echo ::set-env name=CACHE_KEY::$md5cache
 
-      - name: Emscripten install.
-        shell: bash
-        run: |
-          python --version
-          pyenv versions
-          which python
-          cd /opt && \
-          git clone https://github.com/emscripten-core/emsdk.git emsdk && \
-          cd /opt/emsdk && \
-          ./emsdk install latest && \
-          ./emsdk activate latest && \
-          source /opt/emsdk/emsdk_env.sh && \
-          echo "source /opt/emsdk/emsdk_env.sh\n" >> /etc/profile && \
-          emcc --version
+#      - name: Emscripten install.
+#        shell: bash
+#        run: |
+#          python --version
+#          cd /opt && \
+#          git clone https://github.com/emscripten-core/emsdk.git emsdk && \
+#          cd /opt/emsdk && \
+#          ./emsdk install latest && \
+#          ./emsdk activate latest && \
+#          source /opt/emsdk/emsdk_env.sh && \
+#          echo "source /opt/emsdk/emsdk_env.sh\n" >> /etc/profile && \
+#          emcc --version
