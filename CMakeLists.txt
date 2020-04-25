@@ -1,6 +1,6 @@
 # Projects Settings
 cmake_minimum_required (VERSION 3.1)
-project(game-rogue-sdl
+project(ROGUE_SDL
         LANGUAGES CXX
         VERSION 1.0.0
 )
@@ -71,10 +71,17 @@ if(${BUILD_TYPE} STREQUAL webassembly)
 
 else() # Not Web
 
+
+    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+
     find_package(SDL2 REQUIRED)
-    message(FATAL_ERROR ${SDL2_LIBRARIES})
-    target_link_libraries(game-rogue-sdl PRIVATE ${SDL2_LIBRARIES})
-    ##TODO add this later
-#    message(FATAL_ERROR "Building to binaries is not allowed.")
+    find_package(SDL2_image REQUIRED)
+    include_directories(${SDL2_INCLUDE_DIRS})
+    include_directories(${SDL2_IMAGE_DIRS})
+
+    file(COPY "${CMAKE_SOURCE_DIR}/resources/sprites/"
+            DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/sprites)
+
+    target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
 endif()
