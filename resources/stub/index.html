@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png">
+    <link rel="shortcut icon" type="image/png" sizes="64x64" href=“./favicon.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+
+<div id="loading_page" class="vbox">
+    <div class="flex"></div>
+    <div class="hbox">
+        <div class="flex"></div>
+        <div id="loading"></div>
+        <div class="flex"></div>
+    </div>
+    <div class="flex"></div>
+</div>
+
+<canvas id="canvas" oncontextmenu="event.preventDefault()">
+    Loading...
+</canvas>
+
+<script>
+    var canvas = document.getElementById('canvas');
+
+    // Alert the user if we have lost the WebGL context.
+    canvas.addEventListener("webglcontextlost", function(e) {
+        alert('WebGL context lost. You will need to reload the page.');
+        e.preventDefault();
+    }, false);
+
+    function onResize() {
+        canvas.width = 800;//Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        canvas.height = 600;//Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    }
+    window.addEventListener("resize", onResize, true);
+
+    window.Module = {
+        preRun: [],
+        postRun: [],
+        canvas: canvas,
+        onRuntimeInitialized: function() {
+            document.querySelector("#loading_page").remove();
+            window.setTimeout(onResize, 0);
+            window.setTimeout(onResize, 100);
+        },
+        print: console.log,
+        printErr: console.error,
+    };
+
+</script>
+
+<script async src="main.js"></script>
+</body>
+</html>
