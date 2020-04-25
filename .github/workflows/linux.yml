@@ -49,7 +49,7 @@ jobs:
           emcc -v > CACHE_KEY.txt
           echo $MANUAL_CACHING >> CACHE_KEY.txt
           if [ "$AUTO_CACHING" == "1" ]; then
-            thisFile=${{ env.REPO_NAME }}/.github/workflows/linux.yml
+            thisFile=$REPO_NAME/.github/workflows/linux.yml
             echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
           fi
           md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
@@ -58,7 +58,7 @@ jobs:
       - name: Build wasm. 🔧
         shell: bash
         run: |
-          cd ${{ env.REPO_NAME }} && mkdir build && cd build \
+          ls && pwd && cd $REPO_NAME && ls && pwd && mkdir build && cd build \
           && cmake -DBUILD_TYPE=webassembly ..
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
