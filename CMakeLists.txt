@@ -7,6 +7,7 @@ project(ROGUE_SDL
 
 # The main executable
 add_executable(main
+        src/Game.cpp
         src/main.cpp
         )
 
@@ -26,6 +27,7 @@ if(${BUILD_TYPE} STREQUAL webassembly)
 
     set(CMAKE_C_COMPILER "emcc")
     set(CMAKE_CXX_COMPILER "em++")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DEMSCRIPTEN_IS_USED")
 
     set_target_properties(main PROPERTIES OUTPUT_NAME "main.js")
 
