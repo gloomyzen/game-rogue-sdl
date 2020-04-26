@@ -2,22 +2,28 @@
 
 Game *game = nullptr;
 
-//void game_loop()
-//{
+void game_loop(bool isEmscripten = true)
+{
+    std::cout << "Game loop inited!" << std::endl;
 //    input();
 //    move();
 //    render();
-//}
+}
 
 int main()
 {
-    auto isEmscripten = EMSCRIPTEN_FLAG;
-    std::cout << "Test" << std::endl;
-    std::cout << isEmscripten << std::endl;
+    auto emsTemp = EMSCRIPTEN_FLAG;
+    bool isEmscripten = emsTemp == 0;
 
-//    game = new Game();
+    game = new Game();
 
-//    emscripten_set_main_loop(game_loop, 0, 0);
+    if (isEmscripten) {
+        std::cout << "Is emscripten" << std::endl;
+        emscripten_set_main_loop(game_loop, 0, 0);
+    } else {
+        std::cout << "Is not emscripten" << std::endl;
+        game_loop(false);
+    }
 
     return 0;
 } 
