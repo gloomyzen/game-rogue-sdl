@@ -6,6 +6,9 @@
 
 #ifdef EMSCRIPTEN_IS_USED
 #include <emscripten.h>
+#define EMSCRIPTEN_FLAG 0;
+#else
+#define EMSCRIPTEN_FLAG 1;
 #endif //EMSCRIPTEN_IS_USED
 
 class Game {

@@ -11,7 +11,9 @@ Game *game = nullptr;
 
 int main()
 {
+    auto isEmscripten = EMSCRIPTEN_FLAG;
     std::cout << "Test" << std::endl;
+    std::cout << isEmscripten << std::endl;
 
 //    game = new Game();
 
