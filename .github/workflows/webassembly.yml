@@ -1,4 +1,4 @@
-name: Linux
+name: Webassembly build
 
 on:
   push:
@@ -6,11 +6,13 @@ on:
       - 'docs/**'
       - '*.md'
       - 'docker/**'
+      - '.github/workflows/ubuntu-desktop.yml'
   pull_request:
     paths-ignore:
       - 'docs/**'
       - '*.md'
       - 'docker/**'
+      - '.github/workflows/ubuntu-desktop.yml'
 
 jobs:
 
