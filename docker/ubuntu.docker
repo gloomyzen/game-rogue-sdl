@@ -10,7 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --fix-mi
     && ./emsdk install latest \
     && ./emsdk activate latest \
     && source /var/emsdk/emsdk_env.sh \
-    && echo "source /var/emsdk/emsdk_env.sh\n" >> /etc/profile \
+    && echo "source /var/emsdk/emsdk_env.sh" >> /etc/profile \
     && emcc --version
 
 ####################### Install nodejs via nvm #######################
