@@ -24,8 +24,10 @@ public:
     void render();
     void clean();
     bool running() { return isRunning; }
+    bool emscripten() { return isEmscripten; }
 
 private:
+    bool isEmscripten;
     bool isRunning;
     SDL_Window *window;
     SDL_Renderer *renderer;

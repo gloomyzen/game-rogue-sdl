@@ -9,7 +9,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     int fullscreen_flag = fullscreen ? SDL_WINDOW_FULLSCREEN : 0;
     Uint32 render_flag = SDL_RENDERER_ACCELERATED;
 
-    if(SDL_Init(SDL_INIT_EVERYTHING) == 0)
+    auto emsTemp = EMSCRIPTEN_FLAG;
+    isEmscripten = emsTemp == 0;
+
+    if((isEmscripten && SDL_Init( SDL_INIT_VIDEO ) == 0) || (!isEmscripten && SDL_Init(SDL_INIT_EVERYTHING) == 0))
     {
         std::cout << "Initialize." << std::endl;
         window = SDL_CreateWindow(title, xpos, ypos, width, height, fullscreen_flag);
