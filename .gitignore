@@ -9,4 +9,6 @@
 #Temp build folders
 build
 cmake-build-*
+#temp folder for nginx
+public
 
