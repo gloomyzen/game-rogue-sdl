@@ -27,19 +27,22 @@ if(${BUILD_TYPE} STREQUAL webassembly)
 
     set(CMAKE_C_COMPILER "emcc")
     set(CMAKE_CXX_COMPILER "em++")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DEMSCRIPTEN_IS_USED")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__EMSCRIPTEN__")
 
     set_target_properties(main PROPERTIES OUTPUT_NAME "main.js")
 
 #    string(APPEND CMAKE_CXX_FLAGS " -s DEMANGLE_SUPPORT=1")
 #    string(APPEND CMAKE_CXX_FLAGS " -s DISABLE_EXCEPTION_CATCHING=2")
+    # -s ASSERTIONS=2 - a vital tool to figure out where things are going wrong.
+    # Even in ‘production’ builds I’ll keep this at 1 despite the significant performance overhead.
+#    string(APPEND CMAKE_CXX_FLAGS " -s ASSERTIONS=2")
     string(APPEND CMAKE_CXX_FLAGS " -s USE_WEBGL2=1")
     string(APPEND CMAKE_CXX_FLAGS " -s USE_SDL=2")
     string(APPEND CMAKE_CXX_FLAGS " -s USE_SDL_IMAGE=2")
     string(APPEND CMAKE_CXX_FLAGS " -s SDL2_IMAGE_FORMATS=[\"png\"]")
     string(APPEND CMAKE_CXX_FLAGS " -s WASM=1")
 
-    #TODO add Release mode with Release flags
+    #TODO add Release and Debug mode with some flags
     #string(APPEND CMAKE_CXX_FLAGS " --closure 1")
     #string(APPEND CMAKE_CXX_FLAGS " --js-opts 3")
     #string(APPEND CMAKE_CXX_FLAGS " --llvm-lto 3")
@@ -81,7 +84,7 @@ else() # Not Web
     include_directories(${SDL2_IMAGE_DIRS})
 
     file(COPY "${CMAKE_SOURCE_DIR}/resources/sprites/"
-            DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/sprites)
+            DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources/sprites)
 
     target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 

@@ -128,6 +128,9 @@ case "$1" in
     --own|-o)
         own_commands $2 $3 $4 $5 $6 $7 $8
         ;;
+    --wasm-build)
+        eval ${DOCKERCORE} exec -it ubuntu bash # cd /var/www && rm -rf public && mkdir public && cd public && source /etc/profile && cmake -DBUILD_TYPE=webassembly .. && make -j$(nproc)
+        ;;
     --remove)
         eval ${DOCKERCORE} system prune -a
         ;;

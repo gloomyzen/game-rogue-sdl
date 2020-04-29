@@ -1,5 +1,8 @@
 #include "Game.hpp"
 
+SDL_Texture *playerTexture;
+SDL_Rect dest;
+
 Game::Game() {}
 
 Game::~Game() {}
@@ -24,12 +27,16 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         if (renderer)
         {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_RenderClear(renderer);
             std::cout << "Renderer created!" << std::endl;
         }
         isRunning = true;
     } else {
         isRunning = false;
     }
+    SDL_Surface* tempSurface = IMG_Load("resources/sprites/BirdOfAnger.png");
+    playerTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
+    SDL_FreeSurface(tempSurface);
 }
 
 void Game::handleEvents() {
@@ -41,7 +48,7 @@ void Game::handleEvents() {
             break;
 
         default:
-            std::cout << "Unhandled event: " << event.type << std::endl;
+//            std::cout << "Unhandled event: " << event.type << std::endl;
             break;
     }
 }
@@ -50,10 +57,17 @@ void Game::update() {}
 
 void Game::render() {
     SDL_RenderClear(renderer);
+    dest.x = 180;
+    dest.y = 160;
+    dest.w = 16 * 5;
+    dest.h = 16 * 5;
+
+//    SDL_RenderCopy(renderer, playerTexture, NULL, NULL);
+    SDL_RenderCopyEx(renderer, playerTexture, NULL, &dest, 0, NULL, SDL_FLIP_NONE);
     SDL_RenderPresent(renderer);
 }
 
-void Game::clean() {
+void Game::quit() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();

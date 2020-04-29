@@ -44,7 +44,9 @@
         postRun: [],
         canvas: canvas,
         onRuntimeInitialized: function() {
-            document.querySelector("#loading_page").remove();
+            setTimeout(function () {
+                document.querySelector("#loading_page").remove();
+            },200);
             window.setTimeout(onResize, 0);
             window.setTimeout(onResize, 100);
         },

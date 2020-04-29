@@ -2,9 +2,10 @@
 #define ROGUE_SDL_GAME_HPP
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 
-#ifdef EMSCRIPTEN_IS_USED
+#ifdef __EMSCRIPTEN__
 #include <emscripten.h>
 #define EMSCRIPTEN_FLAG 0;
 #else
@@ -22,13 +23,13 @@ public:
     void handleEvents();
     void update();
     void render();
-    void clean();
+    void quit();
     bool running() { return isRunning; }
     bool emscripten() { return isEmscripten; }
 
 private:
     bool isEmscripten;
-    bool isRunning;
+    bool isRunning = false;
     SDL_Window *window;
     SDL_Renderer *renderer;
 };

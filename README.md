@@ -1,4 +1,5 @@
-![Linux](https://github.com/gloomyzen/game-rogue-sdl/workflows/Linux/badge.svg?branch=master)
+![Linux build](https://github.com/gloomyzen/game-rogue-sdl/workflows/Linux%20build/badge.svg?branch=master)
+![Webassembly build](https://github.com/gloomyzen/game-rogue-sdl/workflows/Webassembly%20build/badge.svg?branch=master)
 
 My simple rogue like game in C++ compatible with WebAssembly using SDL2.
 
