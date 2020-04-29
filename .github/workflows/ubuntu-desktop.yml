@@ -1,4 +1,4 @@
-name: Webassembly build
+name: Linux build
 
 on:
   push:
@@ -25,10 +25,6 @@ jobs:
     #    container: ubuntu:trusty
 
     steps:
-      - uses: mymindstorm/setup-emsdk@v4
-
-      - name: Verify Emscripten
-        run: emcc -v
 
       - name: Get repository name.
         run: echo ::set-env name=REPO_NAME::${GITHUB_REPOSITORY##*/}
@@ -41,7 +37,8 @@ jobs:
           sudo apt-get install -y --fix-missing \
           git zip cron curl cmake wget python llvm libxml2-dev build-essential libssl-dev software-properties-common \
           checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
-          libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-2.0-0
+          libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-2.0-0 libsdl2-dev libsdl2-image-dev \
+          libsdl2-mixer-dev libsdl2-net-dev libsdl2-ttf-dev libsdl2-gfx-dev
 
       - name: Clone. 🛎️
         uses: actions/checkout@v1
@@ -49,19 +46,19 @@ jobs:
           submodules: recursive
           path: ${{ env.REPO_NAME }}
 
-      - name: First set up.
-        shell: bash
-        run: |
-          emcc -v > CACHE_KEY.txt
-          echo $MANUAL_CACHING >> CACHE_KEY.txt
-          if [ "$AUTO_CACHING" == "1" ]; then
-            thisFile=$REPO_NAME/.github/workflows/linux.yml
-            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
-          fi
-          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
-          echo ::set-env name=CACHE_KEY::$md5cache
+#      - name: First set up.
+#        shell: bash
+#        run: |
+#          emcc -v > CACHE_KEY.txt
+#          echo $MANUAL_CACHING >> CACHE_KEY.txt
+#          if [ "$AUTO_CACHING" == "1" ]; then
+#            thisFile=$REPO_NAME/.github/workflows/linux.yml
+#            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
+#          fi
+#          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
+#          echo ::set-env name=CACHE_KEY::$md5cache
 
-      - name: Build wasm. 🔧
+      - name: Build. 🔧
         shell: bash
         run: |
           mkdir build && cd build \
