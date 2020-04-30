@@ -1,8 +1,8 @@
 #include "Game.h"
 #include "TextureManager.h"
+#include "GameObject.h"
 
-SDL_Texture *playerTexture;
-SDL_Rect dest;
+GameObject* player;
 
 Game::Game() {}
 
@@ -35,7 +35,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     } else {
         isRunning = false;
     }
-    playerTexture = TextureManager::LoadTexture("resources/sprites/BirdOfAnger.png", renderer);
+    player = new GameObject("resources/sprites/BirdOfAnger.png", renderer, 0, 0);
 }
 
 void Game::handleEvents()
@@ -53,17 +53,13 @@ void Game::handleEvents()
     }
 }
 
-void Game::update() {}
+void Game::update() {
+    player->Update();
+}
 
 void Game::render() {
     SDL_RenderClear(renderer);
-    dest.x = 180;
-    dest.y = 160;
-    dest.w = 16 * 5;
-    dest.h = 16 * 5;
-
-//    SDL_RenderCopy(renderer, playerTexture, NULL, NULL);
-    SDL_RenderCopyEx(renderer, playerTexture, NULL, &dest, 0, NULL, SDL_FLIP_NONE);
+    player->Render();
     SDL_RenderPresent(renderer);
 }
 
