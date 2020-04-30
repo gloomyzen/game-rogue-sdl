@@ -11,6 +11,7 @@ add_executable(main
         src/main.cpp
         src/TextureManager.cpp
         src/GameObject.cpp
+        src/Map.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)
