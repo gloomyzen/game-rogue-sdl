@@ -23,6 +23,7 @@ public:
     void handleEvents();
     void update();
     void render();
+    void gameLoop();
     void quit();
     bool running() { return isRunning; }
     bool emscripten() { return isEmscripten; }
@@ -32,6 +33,13 @@ private:
     bool isRunning = false;
     SDL_Window *window;
     SDL_Renderer *renderer;
+    /*
+     * Frame Limiting
+     */
+    const int FPS = 60;
+    const int frameDelay = 1000 / FPS;
+    Uint32 frameStart;
+    int frameTime;
 };
 
 

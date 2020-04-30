@@ -5,9 +5,7 @@ Game *game = nullptr;
 void game_loop()
 {
     while (game->running()) {
-        game->handleEvents();
-        game->update();
-        game->render();
+        game->gameLoop();
     }
 
     game->quit();
@@ -16,9 +14,7 @@ void game_loop()
 void wasm_game_loop()
 {
     if (game->running()) {
-        game->handleEvents();
-        game->update();
-        game->render();
+        game->gameLoop();
     } else {
         game->quit();
         #ifdef __EMSCRIPTEN__

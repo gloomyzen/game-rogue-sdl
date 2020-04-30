@@ -67,6 +67,19 @@ void Game::render() {
     SDL_RenderPresent(renderer);
 }
 
+void Game::gameLoop() {
+    frameStart = SDL_GetTicks();
+
+    handleEvents();
+    update();
+    render();
+
+    frameTime = SDL_GetTicks() - frameStart;
+    if (frameDelay > frameTime) {
+        SDL_Delay(frameDelay - frameTime);
+    }
+}
+
 void Game::quit() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
