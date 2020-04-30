@@ -1,4 +1,4 @@
-#include "Game.hpp"
+#include "Game.h"
 
 Game *game = nullptr;
 

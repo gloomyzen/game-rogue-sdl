@@ -1,5 +1,5 @@
-#ifndef ROGUE_SDL_GAME_HPP
-#define ROGUE_SDL_GAME_HPP
+#ifndef ROGUE_SDL_GAME_H
+#define ROGUE_SDL_GAME_H
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>

@@ -11,6 +11,7 @@ services:
       dockerfile: ./docker/ubuntu.docker
     volumes:
       - ./:/var/www
+      - ./docker/scripts/build_in_container.sh:/usr/local/bin/build_in_container
       - ~/.emscripten_cache:/root/.emscripten_cache
     ports:
       - "35729:35729" # for livereload plugin

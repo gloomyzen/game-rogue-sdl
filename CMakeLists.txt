@@ -9,6 +9,7 @@ project(ROGUE_SDL
 add_executable(main
         src/Game.cpp
         src/main.cpp
+        src/TextureManager.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)

@@ -1,4 +1,5 @@
-#include "Game.hpp"
+#include "Game.h"
+#include "TextureManager.h"
 
 SDL_Texture *playerTexture;
 SDL_Rect dest;
@@ -34,9 +35,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     } else {
         isRunning = false;
     }
-    SDL_Surface* tempSurface = IMG_Load("resources/sprites/BirdOfAnger.png");
-    playerTexture = SDL_CreateTextureFromSurface(renderer, tempSurface);
-    SDL_FreeSurface(tempSurface);
+    playerTexture = TextureManager::LoadTexture("resources/sprites/BirdOfAnger.png", renderer);
 }
 
 void Game::handleEvents() {
