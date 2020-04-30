@@ -28,11 +28,12 @@ public:
     bool running() { return isRunning; }
     bool emscripten() { return isEmscripten; }
 
+    static SDL_Renderer *renderer;
+
 private:
     bool isEmscripten;
     bool isRunning = false;
     SDL_Window *window;
-    SDL_Renderer *renderer;
     /*
      * Frame Limiting
      */

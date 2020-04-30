@@ -4,6 +4,8 @@
 
 GameObject* player;
 
+SDL_Renderer* Game::renderer = nullptr;
+
 Game::Game() {}
 
 Game::~Game() {}
@@ -35,7 +37,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     } else {
         isRunning = false;
     }
-    player = new GameObject("resources/sprites/BirdOfAnger.png", renderer, 0, 0);
+    player = new GameObject("resources/sprites/BirdOfAnger.png", 0, 0);
 }
 
 void Game::handleEvents()
