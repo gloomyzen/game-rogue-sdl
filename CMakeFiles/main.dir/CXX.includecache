@@ -7,10 +7,14 @@
 #IncludeRegexTransform: 
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp
-Game.hpp
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.hpp
+Game.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
+TextureManager.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+GameObject.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.h
 
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.hpp
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
 SDL2/SDL.h
 -
 SDL2/SDL_image.h
@@ -20,7 +24,25 @@ iostream
 emscripten.h
 -
 
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp
+GameObject.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.h
+TextureManager.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.h
+Game.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
+
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp
+TextureManager.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+Game.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
+
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/main.cpp
-Game.hpp
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.hpp
+Game.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
 
