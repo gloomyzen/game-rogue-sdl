@@ -11,6 +11,11 @@ CMakeFiles/main.dir/src/GameObject.cpp.o: ../src/GameObject.cpp
 CMakeFiles/main.dir/src/GameObject.cpp.o: ../src/GameObject.h
 CMakeFiles/main.dir/src/GameObject.cpp.o: ../src/TextureManager.h
 
+CMakeFiles/main.dir/src/Map.cpp.o: ../src/Game.h
+CMakeFiles/main.dir/src/Map.cpp.o: ../src/Map.cpp
+CMakeFiles/main.dir/src/Map.cpp.o: ../src/Map.h
+CMakeFiles/main.dir/src/Map.cpp.o: ../src/TextureManager.h
+
 CMakeFiles/main.dir/src/TextureManager.cpp.o: ../src/Game.h
 CMakeFiles/main.dir/src/TextureManager.cpp.o: ../src/TextureManager.cpp
 CMakeFiles/main.dir/src/TextureManager.cpp.o: ../src/TextureManager.h

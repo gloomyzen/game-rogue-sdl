@@ -34,6 +34,16 @@ TextureManager.h
 Game.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
 
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp
+Map.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.h
+TextureManager.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.h
+Game.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
+
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp
 TextureManager.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h

@@ -11,6 +11,11 @@ CMakeFiles/main.dir/src/GameObject.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+CMakeFiles/main.dir/src/Map.cpp.o
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
 CMakeFiles/main.dir/src/TextureManager.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp

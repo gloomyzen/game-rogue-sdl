@@ -197,7 +197,7 @@ Module['FS_createPath']('/resources', 'sprites', true, true);
     }
   
    }
-   loadPackage({"files": [{"filename": "/resources/sprites/BirdOfAnger.png", "start": 0, "end": 375, "audio": 0}], "remote_package_size": 375, "package_uuid": "2801f1e9-3302-42d5-af2a-8d9c1a0c9836"});
+   loadPackage({"files": [{"filename": "/resources/sprites/BirdOfAnger.png", "start": 0, "end": 375, "audio": 0}], "remote_package_size": 375, "package_uuid": "69c33052-7c61-4af0-b083-72f00b707810"});
   
   })();
   
@@ -1516,11 +1516,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 5344448,
+    STACK_BASE = 5344464,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 101568,
-    DYNAMIC_BASE = 5344448,
-    DYNAMICTOP_PTR = 101408;
+    STACK_MAX = 101584,
+    DYNAMIC_BASE = 5344464,
+    DYNAMICTOP_PTR = 101424;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -2123,7 +2123,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 100544;
+// STATICTOP = STATIC_BASE + 100560;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -6660,7 +6660,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
     }
 
   function _emscripten_get_sbrk_ptr() {
-      return 101408;
+      return 101424;
     }
 
   function _emscripten_glActiveTexture(x0) { GLctx['activeTexture'](x0) }
