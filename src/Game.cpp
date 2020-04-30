@@ -8,8 +8,8 @@ Game::Game() {}
 
 Game::~Game() {}
 
-void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen) {
-
+void Game::init(const char *title, int xpos, int ypos, int width, int height, bool fullscreen)
+{
     int fullscreen_flag = fullscreen ? SDL_WINDOW_FULLSCREEN : 0;
     Uint32 render_flag = SDL_RENDERER_ACCELERATED;
 
@@ -38,7 +38,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     playerTexture = TextureManager::LoadTexture("resources/sprites/BirdOfAnger.png", renderer);
 }
 
-void Game::handleEvents() {
+void Game::handleEvents()
+{
     SDL_Event event;
     SDL_PollEvent(&event);
     switch (event.type) {
@@ -66,7 +67,8 @@ void Game::render() {
     SDL_RenderPresent(renderer);
 }
 
-void Game::gameLoop() {
+void Game::gameLoop()
+{
     frameStart = SDL_GetTicks();
 
     handleEvents();
@@ -79,7 +81,8 @@ void Game::gameLoop() {
     }
 }
 
-void Game::quit() {
+void Game::quit()
+{
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
