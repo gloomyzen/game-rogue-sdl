@@ -3,8 +3,8 @@
 
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/Components.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/ECS.h
-CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/PositionComponent.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/SpriteComponent.h
+CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/TransformComponent.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/Game.cpp
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/Game.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/TextureManager.h

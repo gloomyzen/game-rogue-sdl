@@ -197,7 +197,7 @@ Module['FS_createPath']('/resources', 'sprites', true, true);
     }
   
    }
-   loadPackage({"files": [{"filename": "/resources/sprites/BirdOfAnger.png", "start": 0, "end": 375, "audio": 0}], "remote_package_size": 375, "package_uuid": "a13b2d5e-7cac-4451-a955-682da529b1ff"});
+   loadPackage({"files": [{"filename": "/resources/sprites/BirdOfAnger.png", "start": 0, "end": 375, "audio": 0}], "remote_package_size": 375, "package_uuid": "37bc483c-d4b4-468b-868d-78ad25698194"});
   
   })();
   
