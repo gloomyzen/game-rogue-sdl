@@ -2,9 +2,15 @@
 #include "TextureManager.h"
 #include "GameObject.h"
 
+#include "ECS.h"
+#include "Components.h"
+
 GameObject* player;
 
 SDL_Renderer* Game::renderer = nullptr;
+
+Manager manager;
+auto& newPlayer(manager.addEntity());
 
 Game::Game() {}
 
@@ -38,6 +44,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         isRunning = false;
     }
     player = new GameObject("resources/sprites/BirdOfAnger.png", 0, 0);
+
+    newPlayer.addComponent<PositionComponent>();
 }
 
 void Game::handleEvents()
@@ -57,6 +65,8 @@ void Game::handleEvents()
 
 void Game::update() {
     player->Update();
+    manager.update();
+    std::cout << newPlayer.getComponent<PositionComponent>().getPosition().x << std::endl;
 }
 
 void Game::render() {
