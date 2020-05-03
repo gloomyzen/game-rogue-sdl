@@ -43,11 +43,11 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     //TODO remove this after testing
     player.addComponent<TransformComponent>();
     player.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
+    player.addComponent<KeyboardController>();
 }
 
 void Game::handleEvents()
 {
-    SDL_Event event;
     SDL_PollEvent(&event);
     switch (event.type) {
         case SDL_QUIT:

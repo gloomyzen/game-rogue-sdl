@@ -7,14 +7,14 @@ on:
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '**/**/webassembly.yml'
+      - 'webassembly.yml'
   pull_request:
     paths-ignore:
       - 'docs/**'
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '**/**/webassembly.yml'
+      - 'webassembly.yml'
 
 jobs:
 
@@ -45,13 +45,24 @@ jobs:
           submodules: recursive
           path: ${{ env.REPO_NAME }}
 
+      - name: Get resources.
+        shell: bash
+        env:
+          ASSETS_USER: ${{ secrets.ASSETS_USER }}
+          ASSETS_PASSWORD: ${{ secrets.ASSETS_PASSWORD }}
+          ASSETS_HOST: ${{ secrets.ASSETS_HOST }}
+        run: |
+          cd resources/sprites \
+          && wget --http-user="$ASSETS_USER" --http-passwd="$ASSETS_PASSWORD" --no-check-certificate "$ASSETS_HOST" \
+          && tar -xvf assets.tar.gz
+
 #      - name: First set up.
 #        shell: bash
 #        run: |
 #          emcc -v > CACHE_KEY.txt
 #          echo $MANUAL_CACHING >> CACHE_KEY.txt
 #          if [ "$AUTO_CACHING" == "1" ]; then
-#            thisFile=$REPO_NAME/.github/workflows/linux.yml
+#            thisFile=$REPO_NAME/.github/workflows/ubuntu-desktop.yml
 #            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
 #          fi
 #          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)

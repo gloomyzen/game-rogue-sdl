@@ -7,14 +7,14 @@ on:
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '**/**/ubuntu-desktop.yml'
+      - 'ubuntu-desktop.yml'
   pull_request:
     paths-ignore:
       - 'docs/**'
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '**/**/ubuntu-desktop.yml'
+      - 'ubuntu-desktop.yml'
 
 jobs:
 
@@ -55,21 +55,21 @@ jobs:
           ASSETS_PASSWORD: ${{ secrets.ASSETS_PASSWORD }}
           ASSETS_HOST: ${{ secrets.ASSETS_HOST }}
         run: |
-          cd resources/sprites && echo "pwd\n" && pwd && echo "ls -la\n" && ls -la \
+          cd resources/sprites \
           && wget --http-user="$ASSETS_USER" --http-passwd="$ASSETS_PASSWORD" --no-check-certificate "$ASSETS_HOST" \
-          && tar -xvf assets.tar.gz && ls
+          && tar -xvf assets.tar.gz
 
-      - name: First set up.
-        shell: bash
-        run: |
-          emcc -v > CACHE_KEY.txt
-          echo $MANUAL_CACHING >> CACHE_KEY.txt
-          if [ "$AUTO_CACHING" == "1" ]; then
-            thisFile=$REPO_NAME/.github/workflows/linux.yml
-            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
-          fi
-          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
-          echo ::set-env name=CACHE_KEY::$md5cache
+#      - name: First set up.
+#        shell: bash
+#        run: |
+#          emcc -v > CACHE_KEY.txt
+#          echo $MANUAL_CACHING >> CACHE_KEY.txt
+#          if [ "$AUTO_CACHING" == "1" ]; then
+#            thisFile=$REPO_NAME/.github/workflows/webassembly.yml
+#            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
+#          fi
+#          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
+#          echo ::set-env name=CACHE_KEY::$md5cache
 
       - name: Build wasm. 🔧
         shell: bash
