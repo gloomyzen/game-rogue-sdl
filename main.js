@@ -197,7 +197,7 @@ Module['FS_createPath']('/resources', 'sprites', true, true);
     }
   
    }
-   loadPackage({"files": [{"filename": "/resources/sprites/BirdOfAnger.png", "start": 0, "end": 375, "audio": 0}], "remote_package_size": 375, "package_uuid": "37bc483c-d4b4-468b-868d-78ad25698194"});
+   loadPackage({"files": [{"filename": "/resources/sprites/.gitignore", "start": 0, "end": 13, "audio": 0}, {"filename": "/resources/sprites/RogueEnvironment16x16.png", "start": 13, "end": 45171, "audio": 0}, {"filename": "/resources/sprites/RogueItems16x16.png", "start": 45171, "end": 50260, "audio": 0}, {"filename": "/resources/sprites/RoguePlayer_48x48.png", "start": 50260, "end": 81783, "audio": 0}, {"filename": "/resources/sprites/RoguePlayer_GUIDE.png", "start": 81783, "end": 193362, "audio": 0}, {"filename": "/resources/sprites/RogueSlime32x32.png", "start": 193362, "end": 202666, "audio": 0}, {"filename": "/resources/sprites/assets.tar.gz", "start": 202666, "end": 417706, "audio": 0}], "remote_package_size": 417706, "package_uuid": "b169df66-3284-4028-ae89-7f96c9a9ceef"});
   
   })();
   
