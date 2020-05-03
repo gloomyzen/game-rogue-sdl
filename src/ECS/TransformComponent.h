@@ -2,28 +2,25 @@
 
 #include "ECS.h"
 #include "Components.h"
+#include "../DataTypes/Vector2D.h"
 
-
-struct position {
-    int x, y;
-    //todo rotation, scale
-};
+//todo rotation, scale
 
 class TransformComponent : public Component {
 
 private:
 
-    position componentTransform{};
+    Vector2D componentTransform;
 
 public:
 
     TransformComponent()
     {
-        componentTransform.x = 0;
-        componentTransform.y = 0;
+        componentTransform.x = 0.0f;
+        componentTransform.y = 0.0f;
     }
 
-    TransformComponent(int x, int y)
+    TransformComponent(float x, float y)
     {
         componentTransform.x = x;
         componentTransform.y = y;
@@ -37,16 +34,16 @@ public:
 
     void update() override
     {
-//        componentTransform.x++;
-//        componentTransform.y++;
+        componentTransform.x++;
+        componentTransform.y++;
     }
 
-    position getPosition()
+    Vector2D getPosition()
     {
         return componentTransform;
     }
 
-    void setPosition(int x, int y)
+    void setPosition(float x, float y)
     {
         componentTransform.x = x;
         componentTransform.y = y;

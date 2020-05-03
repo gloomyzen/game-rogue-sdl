@@ -55,7 +55,7 @@ jobs:
           ASSETS_PASSWORD: ${{ secrets.ASSETS_PASSWORD }}
           ASSETS_HOST: ${{ secrets.ASSETS_HOST }}
         run: |
-          cd ${{ env.REPO_NAME }} && cd resources/sprites \
+          echo "pwd\n" && pwd && echo "ls -la\n" && ls -la && cd resources/sprites \
           && wget --http-user="$ASSETS_USER" --http-passwd="$ASSETS_PASSWORD" --no-check-certificate "$ASSETS_HOST" \
           tar -xvf assets.tar.gz && ls
 

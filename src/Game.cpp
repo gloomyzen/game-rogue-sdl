@@ -40,7 +40,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     }
 
     //TODO remove this after testing
-    player.addComponent<TransformComponent>(100, 50);
+    player.addComponent<TransformComponent>();
     player.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
 }
 
