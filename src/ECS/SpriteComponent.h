@@ -10,9 +10,11 @@ private:
     SDL_Texture *texture{};
     SDL_Rect srcRect{}, destRect{};
 
+    //todo дефолтный файл, ширина и высота
+    // todo, тип спрайта
 public:
     SpriteComponent() = default;
-    explicit SpriteComponent(const char* path)
+    explicit SpriteComponent(const char* path/*, int width, int height*/)
     {
         setTexture(path);
     }

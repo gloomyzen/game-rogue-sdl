@@ -6,6 +6,7 @@
 
 struct position {
     int x, y;
+    //todo rotation, scale
 };
 
 class TransformComponent : public Component {
@@ -36,8 +37,8 @@ public:
 
     void update() override
     {
-        componentTransform.x++;
-        componentTransform.y++;
+//        componentTransform.x++;
+//        componentTransform.y++;
     }
 
     position getPosition()

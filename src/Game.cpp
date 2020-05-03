@@ -38,6 +38,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     } else {
         isRunning = false;
     }
+
+    //TODO remove this after testing
     player.addComponent<TransformComponent>(100, 50);
     player.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
 }
