@@ -7,14 +7,14 @@ on:
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '.github/workflows/webassembly.yml'
+      - '**/**/webassembly.yml'
   pull_request:
     paths-ignore:
       - 'docs/**'
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '.github/workflows/webassembly.yml'
+      - '**/**/webassembly.yml'
 
 jobs:
 

@@ -7,14 +7,14 @@ on:
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '.github/workflows/ubuntu-desktop.yml'
+      - '**/**/ubuntu-desktop.yml'
   pull_request:
     paths-ignore:
       - 'docs/**'
       - '*.md'
       - '.gitignore'
       - 'docker/**'
-      - '.github/workflows/ubuntu-desktop.yml'
+      - '**/**/ubuntu-desktop.yml'
 
 jobs:
 
@@ -38,9 +38,7 @@ jobs:
           sudo apt-get update -y
           sudo apt-get dist-upgrade -y
           sudo apt-get install -y --fix-missing \
-          git zip cron curl cmake wget python llvm libxml2-dev build-essential libssl-dev software-properties-common \
-          checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
-          libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-2.0-0
+          git zip cmake wget llvm build-essential libsdl2-2.0-0
 
       - name: Clone. 🛎️
         uses: actions/checkout@v1
@@ -48,7 +46,7 @@ jobs:
           submodules: recursive
           path: ${{ env.REPO_NAME }}
 
-      - name: Get assets
+      - name: Get resources.
         shell: bash
         env:
           ASSETS_USER: ${{ secrets.ASSETS_USER }}
