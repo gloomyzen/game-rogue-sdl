@@ -5,6 +5,7 @@ CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o: ../src/DataTypes/Vector2D.cpp
 CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o: ../src/DataTypes/Vector2D.h
 
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/DataTypes/Vector2D.h
+CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/ColliderController.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/Components.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/ECS.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/KeyboardController.h

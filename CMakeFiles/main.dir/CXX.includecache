@@ -14,6 +14,8 @@ Vector2D.h
 iostream
 -
 
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ColliderController.h
+
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
 ECS.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.h
@@ -23,6 +25,8 @@ SpriteComponent.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/SpriteComponent.h
 KeyboardController.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/KeyboardController.h
+ColliderController.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ColliderController.h
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.h
 iostream

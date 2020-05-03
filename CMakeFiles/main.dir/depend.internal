@@ -6,6 +6,7 @@ CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.h
 CMakeFiles/main.dir/src/Game.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ColliderController.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/KeyboardController.h
