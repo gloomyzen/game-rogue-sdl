@@ -3,6 +3,7 @@
 #include "ECS/Components.h"
 
 SDL_Renderer* Game::renderer = nullptr;
+SDL_Event Game::event;
 
 Manager manager;
 auto& player(manager.addEntity());
