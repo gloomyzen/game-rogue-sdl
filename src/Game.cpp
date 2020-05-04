@@ -49,8 +49,8 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     }
 
     //TODO remove this after testing
-    player.addComponent<TransformComponent>();
-    player.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
+    player.addComponent<TransformComponent>(0, 0, 48, 48, 3);
+    player.addComponent<SpriteComponent>("resources/sprites/RoguePlayer_48x48.png", 8, 200);
     player.addComponent<KeyboardController>();
     player.addComponent<ColliderController>("player");
     player.addGroup(groupPlayers);

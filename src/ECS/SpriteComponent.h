@@ -10,12 +10,23 @@ private:
     SDL_Texture *texture{};
     SDL_Rect srcRect{}, destRect{};
 
+    bool isAnimated = false;
+    int frames = 0;
+    int speed = 100;
+
     //todo дефолтный файл, ширина и высота
-    // todo, тип спрайта
 public:
     SpriteComponent() = default;
     explicit SpriteComponent(const char* path/*, int width, int height*/)
     {
+        setTexture(path);
+    }
+
+    explicit SpriteComponent(const char* path, int nFrames, int nSpeed)
+    {
+        isAnimated = true;
+        frames = nFrames;
+        speed = nSpeed;
         setTexture(path);
     }
     ~SpriteComponent() {
@@ -38,6 +49,9 @@ public:
 
     void update() override
     {
+        if(isAnimated) {
+            srcRect.x = srcRect.w * static_cast<int>((SDL_GetTicks() / speed) % frames);
+        }
         destRect.x = (int)transform->position.x;
         destRect.y = (int)transform->position.y;
         destRect.w = transform->width * transform->scale;
