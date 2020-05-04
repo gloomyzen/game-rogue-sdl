@@ -53,6 +53,10 @@ if(${BUILD_TYPE} STREQUAL webassembly)
     string(APPEND CMAKE_CXX_FLAGS " -s USE_SDL_IMAGE=2")
     string(APPEND CMAKE_CXX_FLAGS " -s SDL2_IMAGE_FORMATS=[\"png\"]")
     string(APPEND CMAKE_CXX_FLAGS " -s WASM=1")
+    string(APPEND CMAKE_CXX_FLAGS " -Wall")
+    string(APPEND CMAKE_CXX_FLAGS " -s NO_EXIT_RUNTIME=1")
+    string(APPEND CMAKE_CXX_FLAGS " -s EXPORTED_FUNCTIONS=\"['_main', '_window_resize']\"")
+    string(APPEND CMAKE_CXX_FLAGS " -s EXTRA_EXPORTED_RUNTIME_METHODS=\"['cwrap', 'ccall']\"")
 
     #TODO add Release and Debug mode with some flags
     #string(APPEND CMAKE_CXX_FLAGS " --closure 1")

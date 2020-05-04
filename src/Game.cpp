@@ -5,6 +5,7 @@
 
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
+SDL_Rect Game::camera = {0,0, 800, 600};
 
 Manager manager;
 auto& player(manager.addEntity());
@@ -43,6 +44,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
             SDL_RenderClear(renderer);
             std::cout << "Renderer created!" << std::endl;
         }
+        Game::camera = {0, 0, width, height};
         isRunning = true;
     } else {
         isRunning = false;
@@ -59,6 +61,12 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 //    wall.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
 //    wall.addComponent<ColliderController>("testWall");
 //    wall.addGroup(groupWalls);
+}
+
+void Game::windowResize(int width, int height) {
+    SDL_SetWindowSize(window, width, height);
+    std::cout << "New window width:" << width << std::endl;
+    std::cout << "New window height:" << height << std::endl;
 }
 
 void Game::handleEvents()

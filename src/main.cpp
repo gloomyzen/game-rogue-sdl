@@ -23,6 +23,12 @@ void wasm_game_loop()
     }
 }
 
+extern "C" {
+    void window_resize(int width, int height) {
+        game->windowResize(width, height);
+    }
+}
+
 int main()
 {
 

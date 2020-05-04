@@ -25,6 +25,7 @@ public:
     ~Game();
 
     void init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
+    void windowResize(int width, int height); // Only for emscripten
 
     void handleEvents();
     void update();
@@ -39,6 +40,7 @@ public:
     static SDL_Renderer *renderer;
     static SDL_Event event;
     static void renderDrawColor();
+    static SDL_Rect camera;
 
 private:
     bool isEmscripten;
