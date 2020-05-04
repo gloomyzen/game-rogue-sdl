@@ -55,10 +55,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     player.addComponent<ColliderController>("player");
     player.addGroup(groupPlayers);
 
-    wall.addComponent<TransformComponent>(200.0f, 200.0f, 50, 50, 2);
-    wall.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
-    wall.addComponent<ColliderController>("testWall");
-    wall.addGroup(groupWalls);
+//    wall.addComponent<TransformComponent>(200.0f, 200.0f, 50, 50, 2);
+//    wall.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
+//    wall.addComponent<ColliderController>("testWall");
+//    wall.addGroup(groupWalls);
 }
 
 void Game::handleEvents()
@@ -78,10 +78,10 @@ void Game::handleEvents()
 void Game::update() {
     manager.refresh();
     manager.update();
-    if (Collision::AABB(player.getComponent<ColliderController>().collider,
-                        wall.getComponent<ColliderController>().collider)) {
-        std::cout << "Wall!!!" << cnt++ << std::endl;
-    }
+//    if (Collision::AABB(player.getComponent<ColliderController>().collider,
+//                        wall.getComponent<ColliderController>().collider)) {
+//        std::cout << "Wall!!!" << cnt++ << std::endl;
+//    }
 }
 
 auto &players(manager.getGroup(groupPlayers));
