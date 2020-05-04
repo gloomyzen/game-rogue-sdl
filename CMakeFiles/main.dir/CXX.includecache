@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Animation.h
+
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.cpp
 Collision.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.h
@@ -81,6 +83,10 @@ SDL.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/SDL.h
 ../TextureManager.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
+../Classes/Animation.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Animation.h
+map
+-
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/TransformComponent.h
 ECS.h
@@ -137,6 +143,8 @@ TextureManager.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
 Game.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
+SDL.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/SDL.h
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/main.cpp
 Game.h

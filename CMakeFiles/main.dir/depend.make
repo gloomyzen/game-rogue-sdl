@@ -10,6 +10,7 @@ CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o: ../src/Classes/DataTyp
 CMakeFiles/main.dir/src/ECS/ECS.cpp.o: ../src/ECS/ECS.cpp
 CMakeFiles/main.dir/src/ECS/ECS.cpp.o: ../src/ECS/ECS.h
 
+CMakeFiles/main.dir/src/Game.cpp.o: ../src/Classes/Animation.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/Classes/Collision.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/Classes/DataTypes/Vector2D.h
 CMakeFiles/main.dir/src/Game.cpp.o: ../src/ECS/ColliderController.h
