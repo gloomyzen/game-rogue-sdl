@@ -197,7 +197,7 @@ Module['FS_createPath']('/resources', 'sprites', true, true);
     }
   
    }
-   loadPackage({"files": [{"filename": "/resources/sprites/.gitignore", "start": 0, "end": 13, "audio": 0}, {"filename": "/resources/sprites/RogueEnvironment16x16.png", "start": 13, "end": 45171, "audio": 0}, {"filename": "/resources/sprites/RogueItems16x16.png", "start": 45171, "end": 50260, "audio": 0}, {"filename": "/resources/sprites/RoguePlayer_48x48.png", "start": 50260, "end": 81783, "audio": 0}, {"filename": "/resources/sprites/RoguePlayer_GUIDE.png", "start": 81783, "end": 193362, "audio": 0}, {"filename": "/resources/sprites/RogueSlime32x32.png", "start": 193362, "end": 202666, "audio": 0}, {"filename": "/resources/sprites/assets.tar.gz", "start": 202666, "end": 417706, "audio": 0}], "remote_package_size": 417706, "package_uuid": "6c212fe9-311b-4364-b52a-bbac7a740e36"});
+   loadPackage({"files": [{"filename": "/resources/sprites/.gitignore", "start": 0, "end": 13, "audio": 0}, {"filename": "/resources/sprites/RogueEnvironment16x16.png", "start": 13, "end": 45171, "audio": 0}, {"filename": "/resources/sprites/RogueItems16x16.png", "start": 45171, "end": 50260, "audio": 0}, {"filename": "/resources/sprites/RoguePlayer_48x48.png", "start": 50260, "end": 81783, "audio": 0}, {"filename": "/resources/sprites/RoguePlayer_GUIDE.png", "start": 81783, "end": 193362, "audio": 0}, {"filename": "/resources/sprites/RogueSlime32x32.png", "start": 193362, "end": 202666, "audio": 0}, {"filename": "/resources/sprites/assets.tar.gz", "start": 202666, "end": 417706, "audio": 0}], "remote_package_size": 417706, "package_uuid": "0bdab2a5-50c5-4f55-8d6a-76718acdf53c"});
   
   })();
   
