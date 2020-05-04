@@ -31,7 +31,7 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
         renderer = SDL_CreateRenderer(window, -1, render_flag);
         if (renderer)
         {
-            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            Game::renderDrawColor();
             SDL_RenderClear(renderer);
             std::cout << "Renderer created!" << std::endl;
         }
@@ -91,4 +91,8 @@ void Game::quit()
     SDL_DestroyRenderer(renderer);
     SDL_Quit();
     std::cout << "Game stopped." << std::endl;
+}
+
+void Game::renderDrawColor() {
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 }

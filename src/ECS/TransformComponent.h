@@ -4,7 +4,7 @@
 #include "Components.h"
 #include "../DataTypes/Vector2D.h"
 
-//todo rotation, scale
+//todo rotation
 
 class TransformComponent : public Component {
 
@@ -13,13 +13,17 @@ public:
     Vector2D position;
     Vector2D velocity;
     Vector2D movement;
-//
+
     Uint64 NOW = SDL_GetPerformanceCounter();
     Uint64 LAST = 0;
     double deltaTime = 0;
 
-    const float deltaSpeed = 1.0f;
-    const int maxSpeed = 3;
+    const float deltaSpeed = 1.5f;
+    const float maxSpeed = 3.0f;
+
+    int width = 32;
+    int height = 32;
+    int scale = 1;
 
     TransformComponent()
     {
@@ -35,8 +39,7 @@ public:
 
     void init() override
     {
-//        velocity.x = 0;
-//        velocity.y = 0;
+        //
     }
 
     void update() override

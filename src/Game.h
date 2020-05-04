@@ -10,7 +10,13 @@
 #define EMSCRIPTEN_FLAG 0;
 #else
 #define EMSCRIPTEN_FLAG 1;
-#endif //EMSCRIPTEN_IS_USED
+#endif //__EMSCRIPTEN__
+
+#ifdef __DEBUG__
+const bool debugMode = true;
+#else
+const bool debugMode = false;
+#endif
 
 class Game {
 
@@ -26,10 +32,13 @@ public:
     void gameLoop();
     void quit();
     bool running() { return isRunning; }
-    bool emscripten() { return isEmscripten; }
+    constexpr bool emscripten() { return isEmscripten; }
+    static bool isDebug() { return debug; }
+
 
     static SDL_Renderer *renderer;
     static SDL_Event event;
+    static void renderDrawColor();
 
 private:
     bool isEmscripten;
@@ -42,6 +51,7 @@ private:
     const int frameDelay = 1000 / FPS;
     Uint32 frameStart;
     int frameTime;
+    static const auto debug = debugMode;
 };
 
 
