@@ -148,7 +148,7 @@ public:
             std::end(entities));
     }
 
-    void AddToGroup(Entity* mEntity, Group mGroup)
+    void addToGroup(Entity* mEntity, Group mGroup)
     {
         groupedEntities[mGroup].emplace_back(mEntity);
     }

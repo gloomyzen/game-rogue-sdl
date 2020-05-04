@@ -14,6 +14,7 @@ add_executable(main
         src/Map.cpp
         src/Classes/DataTypes/Vector2D.cpp
         src/Classes/Collision.cpp
+        src/ECS/ECS.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)

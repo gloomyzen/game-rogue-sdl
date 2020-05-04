@@ -11,6 +11,11 @@ auto& player(manager.addEntity());
 auto& wall(manager.addEntity());
 int cnt = 0;
 
+enum groupLabels : std::size_t {
+    groupWalls,
+    groupPlayers,
+};
+
 Game::Game() {}
 
 Game::~Game() {}
@@ -48,10 +53,12 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     player.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
     player.addComponent<KeyboardController>();
     player.addComponent<ColliderController>("player");
+    player.addGroup(groupPlayers);
 
     wall.addComponent<TransformComponent>(200.0f, 200.0f, 50, 50, 2);
     wall.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
     wall.addComponent<ColliderController>("testWall");
+    wall.addGroup(groupWalls);
 }
 
 void Game::handleEvents()
@@ -77,9 +84,18 @@ void Game::update() {
     }
 }
 
+auto &players(manager.getGroup(groupPlayers));
+auto &walls(manager.getGroup(groupWalls));
+
 void Game::render() {
     SDL_RenderClear(renderer);
-    manager.draw();
+//    manager.draw();
+    for (auto &w : walls) {
+        w->draw();
+    }
+    for (auto &p : players) {
+        p->draw();
+    }
     SDL_RenderPresent(renderer);
 }
 
