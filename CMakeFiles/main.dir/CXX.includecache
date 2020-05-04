@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.cpp
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp
 Vector2D.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
 
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
 iostream
 -
 
@@ -21,8 +21,8 @@ SDL.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/SDL.h
 Components.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
-../DataTypes/Vector2D.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.h
+../Classes/DataTypes/Vector2D.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
 ECS.h
@@ -75,8 +75,8 @@ ECS.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.h
 Components.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
-../DataTypes/Vector2D.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.h
+../Classes/DataTypes/Vector2D.h
+/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp
 Game.h

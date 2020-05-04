@@ -122,18 +122,18 @@ CMakeFiles/main.dir/src/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Map.cpp.s"
 	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp -o CMakeFiles/main.dir/src/Map.cpp.s
 
-CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o: ../src/DataTypes/Vector2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.cpp
+CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o: ../src/Classes/DataTypes/Vector2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o"
+	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp
 
-CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.cpp > CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.i
+CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.i"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp > CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.i
 
-CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/DataTypes/Vector2D.cpp -o CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.s
+CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp -o CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
@@ -142,7 +142,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/src/TextureManager.cpp.o" \
 "CMakeFiles/main.dir/src/GameObject.cpp.o" \
 "CMakeFiles/main.dir/src/Map.cpp.o" \
-"CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o"
+"CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -152,7 +152,7 @@ main.js: CMakeFiles/main.dir/src/main.cpp.o
 main.js: CMakeFiles/main.dir/src/TextureManager.cpp.o
 main.js: CMakeFiles/main.dir/src/GameObject.cpp.o
 main.js: CMakeFiles/main.dir/src/Map.cpp.o
-main.js: CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o
+main.js: CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o
 main.js: CMakeFiles/main.dir/build.make
 main.js: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable main.js"

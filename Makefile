@@ -123,32 +123,32 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/DataTypes/Vector2D.o: src/DataTypes/Vector2D.cpp.o
+src/Classes/DataTypes/Vector2D.o: src/Classes/DataTypes/Vector2D.cpp.o
 
-.PHONY : src/DataTypes/Vector2D.o
+.PHONY : src/Classes/DataTypes/Vector2D.o
 
 # target to build an object file
-src/DataTypes/Vector2D.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.o
-.PHONY : src/DataTypes/Vector2D.cpp.o
+src/Classes/DataTypes/Vector2D.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o
+.PHONY : src/Classes/DataTypes/Vector2D.cpp.o
 
-src/DataTypes/Vector2D.i: src/DataTypes/Vector2D.cpp.i
+src/Classes/DataTypes/Vector2D.i: src/Classes/DataTypes/Vector2D.cpp.i
 
-.PHONY : src/DataTypes/Vector2D.i
+.PHONY : src/Classes/DataTypes/Vector2D.i
 
 # target to preprocess a source file
-src/DataTypes/Vector2D.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.i
-.PHONY : src/DataTypes/Vector2D.cpp.i
+src/Classes/DataTypes/Vector2D.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.i
+.PHONY : src/Classes/DataTypes/Vector2D.cpp.i
 
-src/DataTypes/Vector2D.s: src/DataTypes/Vector2D.cpp.s
+src/Classes/DataTypes/Vector2D.s: src/Classes/DataTypes/Vector2D.cpp.s
 
-.PHONY : src/DataTypes/Vector2D.s
+.PHONY : src/Classes/DataTypes/Vector2D.s
 
 # target to generate assembly for a file
-src/DataTypes/Vector2D.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataTypes/Vector2D.cpp.s
-.PHONY : src/DataTypes/Vector2D.cpp.s
+src/Classes/DataTypes/Vector2D.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s
+.PHONY : src/Classes/DataTypes/Vector2D.cpp.s
 
 src/Game.o: src/Game.cpp.o
 
@@ -294,9 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... src/DataTypes/Vector2D.o"
-	@echo "... src/DataTypes/Vector2D.i"
-	@echo "... src/DataTypes/Vector2D.s"
+	@echo "... src/Classes/DataTypes/Vector2D.o"
+	@echo "... src/Classes/DataTypes/Vector2D.i"
+	@echo "... src/Classes/DataTypes/Vector2D.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
