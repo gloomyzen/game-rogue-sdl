@@ -27,6 +27,6 @@ make -j$(nproc)
 ```
 
 The project uses external assets "[Rogue Dungeon Tileset 16x16](https://secrethideout.itch.io/rogue-dungeon-tileset-16x16)" to save the copyright of the author in the repository of these assets.
-The author of the assets has done a great and outstanding job, so please read the author’s [official page](https://secrethideout.itch.io/rogue-dungeon-tileset-16x16).
+The author of the assets has done a great and outstanding work, it inspired me to create this project, so please read the author’s [official page](https://secrethideout.itch.io/rogue-dungeon-tileset-16x16)
 
 
