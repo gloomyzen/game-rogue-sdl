@@ -37,6 +37,15 @@ public:
         position.y = y;
     }
 
+    TransformComponent(float x, float y, int width, int height, int scale)
+    {
+        position.x = x;
+        position.y = y;
+        this->width = width;
+        this->height = height;
+        this->scale = scale;
+    }
+
     void init() override
     {
         //

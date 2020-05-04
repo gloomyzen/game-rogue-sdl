@@ -1,12 +1,15 @@
 #include "Game.h"
 #include "ECS/ECS.h"
 #include "ECS/Components.h"
+#include "Classes/Collision.h"
 
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 
 Manager manager;
 auto& player(manager.addEntity());
+auto& wall(manager.addEntity());
+int cnt = 0;
 
 Game::Game() {}
 
@@ -44,6 +47,11 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     player.addComponent<TransformComponent>();
     player.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
     player.addComponent<KeyboardController>();
+    player.addComponent<ColliderController>("player");
+
+    wall.addComponent<TransformComponent>(200.0f, 200.0f, 50, 50, 2);
+    wall.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
+    wall.addComponent<ColliderController>("testWall");
 }
 
 void Game::handleEvents()
@@ -63,6 +71,10 @@ void Game::handleEvents()
 void Game::update() {
     manager.refresh();
     manager.update();
+    if (Collision::AABB(player.getComponent<ColliderController>().collider,
+                        wall.getComponent<ColliderController>().collider)) {
+        std::cout << "Wall!!!" << cnt++ << std::endl;
+    }
 }
 
 void Game::render() {

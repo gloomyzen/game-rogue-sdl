@@ -13,6 +13,7 @@ add_executable(main
         src/GameObject.cpp
         src/Map.cpp
         src/Classes/DataTypes/Vector2D.cpp
+        src/Classes/Collision.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)

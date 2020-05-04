@@ -12,6 +12,11 @@ public:
 
     TransformComponent* transform;
 
+    ColliderController(const char* name) {
+        std::cout << name << std::endl;
+        this->tag = name;
+    }
+
     void init() override {
         if (!entity->hasComponent<TransformComponent>()) {
             entity->addComponent<TransformComponent>();
