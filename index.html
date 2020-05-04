@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/png" sizes="64x64" href="./favicon.png">
-    <link rel="shortcut icon" type="image/png" sizes="64x64" href=“./favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon.ico">
+    <link rel="shortcut icon" type="image/png" sizes="64x64" href="favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
@@ -29,13 +29,20 @@
 
     // Alert the user if we have lost the WebGL context.
     canvas.addEventListener("webglcontextlost", function(e) {
-        alert('WebGL context lost. You will need to reload the page.');
         e.preventDefault();
+        var warningText = document.createTextNode('Sorry. WebGL context lost. You will need to reload the page or turn on WebGL support in your browser.');
+        var warningDiv = document.createElement('div');
+        warningDiv.classList.add('warning');
+        warningDiv.appendChild(warningText);
+        document.querySelector('body').appendChild(warningDiv);
     }, false);
 
+    window.canvasResize = function (i,e) {};
+
     function onResize() {
-        canvas.width = 800;//Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-        canvas.height = 600;//Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        canvas.width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        canvas.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        window.canvasResize(canvas.width, canvas.height);
     }
     window.addEventListener("resize", onResize, true);
 
@@ -44,10 +51,11 @@
         postRun: [],
         canvas: canvas,
         onRuntimeInitialized: function() {
+            window.canvasResize = Module.cwrap('window_resize', 'undefined', ['int', 'int']);
             setTimeout(function () {
                 document.querySelector("#loading_page").remove();
             },200);
-            window.setTimeout(onResize, 0);
+            // window.setTimeout(onResize, 0);
             window.setTimeout(onResize, 100);
         },
         print: console.log,
