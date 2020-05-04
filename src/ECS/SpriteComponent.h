@@ -21,6 +21,7 @@ public:
 
     int animIndex = 0;
     std::map<const char*, Animation> animations;
+    SDL_RendererFlip spriteFlip = SDL_FLIP_NONE;
 
     SpriteComponent() = default;
     explicit SpriteComponent(const char* path/*, int width, int height*/)
@@ -76,7 +77,7 @@ public:
 
     void draw() override
     {
-        TextureManager::Draw(texture, srcRect, destRect);
+        TextureManager::DrawFlip(texture, srcRect, destRect, spriteFlip);
     }
 
     void setTexture(const char* path)
