@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/Classes/Collision.o: src/Classes/Collision.cpp.o
+
+.PHONY : src/Classes/Collision.o
+
+# target to build an object file
+src/Classes/Collision.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Collision.cpp.o
+.PHONY : src/Classes/Collision.cpp.o
+
+src/Classes/Collision.i: src/Classes/Collision.cpp.i
+
+.PHONY : src/Classes/Collision.i
+
+# target to preprocess a source file
+src/Classes/Collision.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Collision.cpp.i
+.PHONY : src/Classes/Collision.cpp.i
+
+src/Classes/Collision.s: src/Classes/Collision.cpp.s
+
+.PHONY : src/Classes/Collision.s
+
+# target to generate assembly for a file
+src/Classes/Collision.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Collision.cpp.s
+.PHONY : src/Classes/Collision.cpp.s
+
 src/Classes/DataTypes/Vector2D.o: src/Classes/DataTypes/Vector2D.cpp.o
 
 .PHONY : src/Classes/DataTypes/Vector2D.o
@@ -149,6 +176,33 @@ src/Classes/DataTypes/Vector2D.s: src/Classes/DataTypes/Vector2D.cpp.s
 src/Classes/DataTypes/Vector2D.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s
 .PHONY : src/Classes/DataTypes/Vector2D.cpp.s
+
+src/ECS/ECS.o: src/ECS/ECS.cpp.o
+
+.PHONY : src/ECS/ECS.o
+
+# target to build an object file
+src/ECS/ECS.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ECS/ECS.cpp.o
+.PHONY : src/ECS/ECS.cpp.o
+
+src/ECS/ECS.i: src/ECS/ECS.cpp.i
+
+.PHONY : src/ECS/ECS.i
+
+# target to preprocess a source file
+src/ECS/ECS.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ECS/ECS.cpp.i
+.PHONY : src/ECS/ECS.cpp.i
+
+src/ECS/ECS.s: src/ECS/ECS.cpp.s
+
+.PHONY : src/ECS/ECS.s
+
+# target to generate assembly for a file
+src/ECS/ECS.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ECS/ECS.cpp.s
+.PHONY : src/ECS/ECS.cpp.s
 
 src/Game.o: src/Game.cpp.o
 
@@ -294,9 +348,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... src/Classes/Collision.o"
+	@echo "... src/Classes/Collision.i"
+	@echo "... src/Classes/Collision.s"
 	@echo "... src/Classes/DataTypes/Vector2D.o"
 	@echo "... src/Classes/DataTypes/Vector2D.i"
 	@echo "... src/Classes/DataTypes/Vector2D.s"
+	@echo "... src/ECS/ECS.o"
+	@echo "... src/ECS/ECS.i"
+	@echo "... src/ECS/ECS.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
