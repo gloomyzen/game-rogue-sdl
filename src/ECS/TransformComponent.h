@@ -2,7 +2,7 @@
 
 #include "ECS.h"
 #include "Components.h"
-#include "../DataTypes/Vector2D.h"
+#include "../Classes/DataTypes/Vector2D.h"
 
 //todo rotation
 

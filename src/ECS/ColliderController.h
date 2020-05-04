@@ -3,7 +3,7 @@
 #include <string>
 #include "SDL.h"
 #include "Components.h"
-#include "../DataTypes/Vector2D.h"
+#include "../Classes/DataTypes/Vector2D.h"
 
 class ColliderController : public Component {
 public:
@@ -17,5 +17,12 @@ public:
             entity->addComponent<TransformComponent>();
         }
         transform = &entity->getComponent<TransformComponent>();
+    }
+
+    void update() override {
+        collider.x = transform->position.x;
+        collider.y = transform->position.y;
+        collider.w = transform->width * transform->scale;
+        collider.h = transform->height * transform->scale;
     }
 };

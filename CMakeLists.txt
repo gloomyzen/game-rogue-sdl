@@ -12,7 +12,7 @@ add_executable(main
         src/TextureManager.cpp
         src/GameObject.cpp
         src/Map.cpp
-        src/DataTypes/Vector2D.cpp
+        src/Classes/DataTypes/Vector2D.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)
