@@ -14,16 +14,29 @@ CMakeFiles/main.dir/src/Game.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Animation.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/CameraComponent.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ColliderController.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/KeyboardController.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/SpriteComponent.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/TouchController.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/TransformComponent.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.h
 CMakeFiles/main.dir/src/GameObject.cpp.o
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Animation.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/CameraComponent.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ColliderController.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/Components.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/KeyboardController.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/SpriteComponent.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/TouchController.h
+ /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/TransformComponent.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.h
