@@ -18,7 +18,7 @@ public:
     Uint64 LAST = 0;
     double deltaTime = 0;
 
-    const float deltaSpeed = 1.5f;
+    const float deltaSpeed = 1.0f;
     const float maxSpeed = 3.0f;
 
     int width = 32;
