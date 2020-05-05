@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="favicon.ico">
     <link rel="shortcut icon" type="image/png" sizes="64x64" href="favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="debug" content="true">
 </head>
 <body>
 
@@ -39,12 +40,28 @@
 
     window.canvasResize = function (i,e) {};
 
+    window.debug = document.querySelector('meta[name="debug"]') ? document.querySelector('meta[name="debug"]').content : false;
+    if (window.debug) {
+        var debugDiv = document.createElement('div');
+        debugDiv.classList.add('debug');
+        document.querySelector('body').appendChild(debugDiv);
+    }
+
     function onResize() {
         canvas.width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         canvas.height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         window.canvasResize(canvas.width, canvas.height);
     }
     window.addEventListener("resize", onResize, true);
+
+    window.printLog = function(error) {
+        if (!window.debug) return;
+        var errorText = document.createTextNode(error);
+        var errorRow = document.createElement('div');
+        errorRow.classList.add('debug_row');
+        errorRow.appendChild(errorText);
+        debugDiv.appendChild(errorRow);
+    };
 
     window.Module = {
         preRun: [],
@@ -58,8 +75,14 @@
             // window.setTimeout(onResize, 0);
             window.setTimeout(onResize, 100);
         },
-        print: console.log,
-        printErr: console.error,
+        print: function (log) {
+            window.printLog(log);
+            // console.log('log', log);
+        },
+        printErr: function (error) {
+            window.printLog(error);
+            // console.log('error', error);
+        },
     };
 
 </script>

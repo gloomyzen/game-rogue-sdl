@@ -26,6 +26,9 @@ public:
     }
 
     void update() override {
+        //TODO try to use and create TouchController
+//        Game::event.tfinger
+
         if (Game::event.type == SDL_KEYDOWN) {
             switch (Game::event.key.keysym.sym) {
                 case SDLK_w:

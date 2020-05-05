@@ -4,6 +4,7 @@
 #include "SDL.h"
 #include "Components.h"
 #include "../Classes/DataTypes/Vector2D.h"
+#include "../Classes/Collision.h"
 
 class ColliderController : public Component {
 public:

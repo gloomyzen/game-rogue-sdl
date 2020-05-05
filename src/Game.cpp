@@ -31,6 +31,10 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
 
     if((isEmscripten && SDL_Init( SDL_INIT_VIDEO ) == 0) || (!isEmscripten && SDL_Init(SDL_INIT_EVERYTHING) == 0))
     {
+        if( !SDL_SetHint( SDL_HINT_RENDER_VSYNC, "1" ) )
+        {
+            printf( "Warning: Vsync rendering not enabled!" );
+        }
         std::cout << "Initialize." << std::endl;
         window = SDL_CreateWindow(title, xpos, ypos, width, height, fullscreen_flag);
         if (window) {
@@ -54,19 +58,19 @@ void Game::init(const char *title, int xpos, int ypos, int width, int height, bo
     player.addComponent<TransformComponent>(0, 0, 48, 48, 3);
     player.addComponent<SpriteComponent>("resources/sprites/RoguePlayer_48x48.png", true);
     player.addComponent<KeyboardController>();
+    player.addComponent<TouchController>();
     player.addComponent<ColliderController>("player");
     player.addGroup(groupPlayers);
 
-//    wall.addComponent<TransformComponent>(200.0f, 200.0f, 50, 50, 2);
-//    wall.addComponent<SpriteComponent>("resources/sprites/BirdOfAnger.png");
-//    wall.addComponent<ColliderController>("testWall");
-//    wall.addGroup(groupWalls);
+    wall.addComponent<TransformComponent>(200.0f, 200.0f, 16, 16, 3 * 2);
+    wall.addComponent<SpriteComponent>("resources/sprites/RogueEnvironment16x16.png");
+    wall.addComponent<ColliderController>("testWall");
+    wall.addGroup(groupWalls);
 }
 
 void Game::windowResize(int width, int height) {
+    Game::camera = {0, 0, width, height};
     SDL_SetWindowSize(window, width, height);
-    std::cout << "New window width:" << width << std::endl;
-    std::cout << "New window height:" << height << std::endl;
 }
 
 void Game::handleEvents()
@@ -86,10 +90,13 @@ void Game::handleEvents()
 void Game::update() {
     manager.refresh();
     manager.update();
-//    if (Collision::AABB(player.getComponent<ColliderController>().collider,
-//                        wall.getComponent<ColliderController>().collider)) {
-//        std::cout << "Wall!!!" << cnt++ << std::endl;
-//    }
+    /*if (Collision::AABB(player.getComponent<ColliderController>().collider,
+                        wall.getComponent<ColliderController>().collider)) {
+        std::cout << "Wall!!!" << cnt++ << std::endl;
+    }*/
+    camera.x = player.getComponent<TransformComponent>().position.x - camera.w / 2;
+    camera.y = player.getComponent<TransformComponent>().position.y - camera.h / 2;
+
 }
 
 auto &players(manager.getGroup(groupPlayers));
