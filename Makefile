@@ -123,33 +123,6 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/Classes/Collision.o: src/Classes/Collision.cpp.o
-
-.PHONY : src/Classes/Collision.o
-
-# target to build an object file
-src/Classes/Collision.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Collision.cpp.o
-.PHONY : src/Classes/Collision.cpp.o
-
-src/Classes/Collision.i: src/Classes/Collision.cpp.i
-
-.PHONY : src/Classes/Collision.i
-
-# target to preprocess a source file
-src/Classes/Collision.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Collision.cpp.i
-.PHONY : src/Classes/Collision.cpp.i
-
-src/Classes/Collision.s: src/Classes/Collision.cpp.s
-
-.PHONY : src/Classes/Collision.s
-
-# target to generate assembly for a file
-src/Classes/Collision.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Collision.cpp.s
-.PHONY : src/Classes/Collision.cpp.s
-
 src/Classes/DataTypes/Vector2D.o: src/Classes/DataTypes/Vector2D.cpp.o
 
 .PHONY : src/Classes/DataTypes/Vector2D.o
@@ -177,140 +150,140 @@ src/Classes/DataTypes/Vector2D.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s
 .PHONY : src/Classes/DataTypes/Vector2D.cpp.s
 
-src/ECS/ECS.o: src/ECS/ECS.cpp.o
+src/Classes/ECS/Collision.o: src/Classes/ECS/Collision.cpp.o
 
-.PHONY : src/ECS/ECS.o
-
-# target to build an object file
-src/ECS/ECS.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ECS/ECS.cpp.o
-.PHONY : src/ECS/ECS.cpp.o
-
-src/ECS/ECS.i: src/ECS/ECS.cpp.i
-
-.PHONY : src/ECS/ECS.i
-
-# target to preprocess a source file
-src/ECS/ECS.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ECS/ECS.cpp.i
-.PHONY : src/ECS/ECS.cpp.i
-
-src/ECS/ECS.s: src/ECS/ECS.cpp.s
-
-.PHONY : src/ECS/ECS.s
-
-# target to generate assembly for a file
-src/ECS/ECS.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ECS/ECS.cpp.s
-.PHONY : src/ECS/ECS.cpp.s
-
-src/Game.o: src/Game.cpp.o
-
-.PHONY : src/Game.o
+.PHONY : src/Classes/ECS/Collision.o
 
 # target to build an object file
-src/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
+src/Classes/ECS/Collision.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o
+.PHONY : src/Classes/ECS/Collision.cpp.o
 
-src/Game.i: src/Game.cpp.i
+src/Classes/ECS/Collision.i: src/Classes/ECS/Collision.cpp.i
 
-.PHONY : src/Game.i
+.PHONY : src/Classes/ECS/Collision.i
 
 # target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
+src/Classes/ECS/Collision.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.i
+.PHONY : src/Classes/ECS/Collision.cpp.i
 
-src/Game.s: src/Game.cpp.s
+src/Classes/ECS/Collision.s: src/Classes/ECS/Collision.cpp.s
 
-.PHONY : src/Game.s
+.PHONY : src/Classes/ECS/Collision.s
 
 # target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
+src/Classes/ECS/Collision.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.s
+.PHONY : src/Classes/ECS/Collision.cpp.s
 
-src/GameObject.o: src/GameObject.cpp.o
+src/Classes/ECS/ECS.o: src/Classes/ECS/ECS.cpp.o
 
-.PHONY : src/GameObject.o
+.PHONY : src/Classes/ECS/ECS.o
 
 # target to build an object file
-src/GameObject.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GameObject.cpp.o
-.PHONY : src/GameObject.cpp.o
+src/Classes/ECS/ECS.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o
+.PHONY : src/Classes/ECS/ECS.cpp.o
 
-src/GameObject.i: src/GameObject.cpp.i
+src/Classes/ECS/ECS.i: src/Classes/ECS/ECS.cpp.i
 
-.PHONY : src/GameObject.i
+.PHONY : src/Classes/ECS/ECS.i
 
 # target to preprocess a source file
-src/GameObject.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GameObject.cpp.i
-.PHONY : src/GameObject.cpp.i
+src/Classes/ECS/ECS.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.i
+.PHONY : src/Classes/ECS/ECS.cpp.i
 
-src/GameObject.s: src/GameObject.cpp.s
+src/Classes/ECS/ECS.s: src/Classes/ECS/ECS.cpp.s
 
-.PHONY : src/GameObject.s
+.PHONY : src/Classes/ECS/ECS.s
 
 # target to generate assembly for a file
-src/GameObject.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/GameObject.cpp.s
-.PHONY : src/GameObject.cpp.s
+src/Classes/ECS/ECS.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.s
+.PHONY : src/Classes/ECS/ECS.cpp.s
 
-src/Map.o: src/Map.cpp.o
+src/Classes/Game.o: src/Classes/Game.cpp.o
 
-.PHONY : src/Map.o
+.PHONY : src/Classes/Game.o
 
 # target to build an object file
-src/Map.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Map.cpp.o
-.PHONY : src/Map.cpp.o
+src/Classes/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Game.cpp.o
+.PHONY : src/Classes/Game.cpp.o
 
-src/Map.i: src/Map.cpp.i
+src/Classes/Game.i: src/Classes/Game.cpp.i
 
-.PHONY : src/Map.i
+.PHONY : src/Classes/Game.i
 
 # target to preprocess a source file
-src/Map.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Map.cpp.i
-.PHONY : src/Map.cpp.i
+src/Classes/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Game.cpp.i
+.PHONY : src/Classes/Game.cpp.i
 
-src/Map.s: src/Map.cpp.s
+src/Classes/Game.s: src/Classes/Game.cpp.s
 
-.PHONY : src/Map.s
+.PHONY : src/Classes/Game.s
 
 # target to generate assembly for a file
-src/Map.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Map.cpp.s
-.PHONY : src/Map.cpp.s
+src/Classes/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Game.cpp.s
+.PHONY : src/Classes/Game.cpp.s
 
-src/TextureManager.o: src/TextureManager.cpp.o
+src/Classes/GameObjects/GameObject.o: src/Classes/GameObjects/GameObject.cpp.o
 
-.PHONY : src/TextureManager.o
+.PHONY : src/Classes/GameObjects/GameObject.o
 
 # target to build an object file
-src/TextureManager.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TextureManager.cpp.o
-.PHONY : src/TextureManager.cpp.o
+src/Classes/GameObjects/GameObject.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o
+.PHONY : src/Classes/GameObjects/GameObject.cpp.o
 
-src/TextureManager.i: src/TextureManager.cpp.i
+src/Classes/GameObjects/GameObject.i: src/Classes/GameObjects/GameObject.cpp.i
 
-.PHONY : src/TextureManager.i
+.PHONY : src/Classes/GameObjects/GameObject.i
 
 # target to preprocess a source file
-src/TextureManager.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TextureManager.cpp.i
-.PHONY : src/TextureManager.cpp.i
+src/Classes/GameObjects/GameObject.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.i
+.PHONY : src/Classes/GameObjects/GameObject.cpp.i
 
-src/TextureManager.s: src/TextureManager.cpp.s
+src/Classes/GameObjects/GameObject.s: src/Classes/GameObjects/GameObject.cpp.s
 
-.PHONY : src/TextureManager.s
+.PHONY : src/Classes/GameObjects/GameObject.s
 
 # target to generate assembly for a file
-src/TextureManager.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TextureManager.cpp.s
-.PHONY : src/TextureManager.cpp.s
+src/Classes/GameObjects/GameObject.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.s
+.PHONY : src/Classes/GameObjects/GameObject.cpp.s
+
+src/Classes/TextureManager.o: src/Classes/TextureManager.cpp.o
+
+.PHONY : src/Classes/TextureManager.o
+
+# target to build an object file
+src/Classes/TextureManager.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o
+.PHONY : src/Classes/TextureManager.cpp.o
+
+src/Classes/TextureManager.i: src/Classes/TextureManager.cpp.i
+
+.PHONY : src/Classes/TextureManager.i
+
+# target to preprocess a source file
+src/Classes/TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/TextureManager.cpp.i
+.PHONY : src/Classes/TextureManager.cpp.i
+
+src/Classes/TextureManager.s: src/Classes/TextureManager.cpp.s
+
+.PHONY : src/Classes/TextureManager.s
+
+# target to generate assembly for a file
+src/Classes/TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/TextureManager.cpp.s
+.PHONY : src/Classes/TextureManager.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -348,27 +321,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
-	@echo "... src/Classes/Collision.o"
-	@echo "... src/Classes/Collision.i"
-	@echo "... src/Classes/Collision.s"
 	@echo "... src/Classes/DataTypes/Vector2D.o"
 	@echo "... src/Classes/DataTypes/Vector2D.i"
 	@echo "... src/Classes/DataTypes/Vector2D.s"
-	@echo "... src/ECS/ECS.o"
-	@echo "... src/ECS/ECS.i"
-	@echo "... src/ECS/ECS.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
-	@echo "... src/GameObject.o"
-	@echo "... src/GameObject.i"
-	@echo "... src/GameObject.s"
-	@echo "... src/Map.o"
-	@echo "... src/Map.i"
-	@echo "... src/Map.s"
-	@echo "... src/TextureManager.o"
-	@echo "... src/TextureManager.i"
-	@echo "... src/TextureManager.s"
+	@echo "... src/Classes/ECS/Collision.o"
+	@echo "... src/Classes/ECS/Collision.i"
+	@echo "... src/Classes/ECS/Collision.s"
+	@echo "... src/Classes/ECS/ECS.o"
+	@echo "... src/Classes/ECS/ECS.i"
+	@echo "... src/Classes/ECS/ECS.s"
+	@echo "... src/Classes/Game.o"
+	@echo "... src/Classes/Game.i"
+	@echo "... src/Classes/Game.s"
+	@echo "... src/Classes/GameObjects/GameObject.o"
+	@echo "... src/Classes/GameObjects/GameObject.i"
+	@echo "... src/Classes/GameObjects/GameObject.s"
+	@echo "... src/Classes/TextureManager.o"
+	@echo "... src/Classes/TextureManager.i"
+	@echo "... src/Classes/TextureManager.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

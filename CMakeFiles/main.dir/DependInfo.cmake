@@ -4,13 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/Collision.cpp.o"
   "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o"
-  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/ECS/ECS.cpp.o"
-  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Game.cpp.o"
-  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/GameObject.cpp.o"
-  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Map.cpp.o"
-  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/TextureManager.cpp.o"
+  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Collision.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o"
+  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o"
+  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/Game.cpp.o"
+  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o"
+  "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o"
   "/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/main.cpp" "/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles/main.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

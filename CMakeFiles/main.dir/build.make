@@ -57,18 +57,18 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/src/Game.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Game.cpp.o: ../src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/Game.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Game.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp
+CMakeFiles/main.dir/src/Classes/Game.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/Classes/Game.cpp.o"
+	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/Game.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.cpp
 
-CMakeFiles/main.dir/src/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Game.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp > CMakeFiles/main.dir/src/Game.cpp.i
+CMakeFiles/main.dir/src/Classes/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/Game.cpp.i"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.cpp > CMakeFiles/main.dir/src/Classes/Game.cpp.i
 
-CMakeFiles/main.dir/src/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Game.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Game.cpp -o CMakeFiles/main.dir/src/Game.cpp.s
+CMakeFiles/main.dir/src/Classes/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/Game.cpp.s"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.cpp -o CMakeFiles/main.dir/src/Classes/Game.cpp.s
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
@@ -83,48 +83,35 @@ CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
 	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
-CMakeFiles/main.dir/src/TextureManager.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/TextureManager.cpp.o: ../src/TextureManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/TextureManager.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/TextureManager.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp
+CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o: ../src/Classes/TextureManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o"
+	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.cpp
 
-CMakeFiles/main.dir/src/TextureManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/TextureManager.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp > CMakeFiles/main.dir/src/TextureManager.cpp.i
+CMakeFiles/main.dir/src/Classes/TextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/TextureManager.cpp.i"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.cpp > CMakeFiles/main.dir/src/Classes/TextureManager.cpp.i
 
-CMakeFiles/main.dir/src/TextureManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/TextureManager.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/TextureManager.cpp -o CMakeFiles/main.dir/src/TextureManager.cpp.s
+CMakeFiles/main.dir/src/Classes/TextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/TextureManager.cpp.s"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.cpp -o CMakeFiles/main.dir/src/Classes/TextureManager.cpp.s
 
-CMakeFiles/main.dir/src/GameObject.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/GameObject.cpp.o: ../src/GameObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/GameObject.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/GameObject.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp
+CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/GameObjects/GameObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o"
+	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.cpp
 
-CMakeFiles/main.dir/src/GameObject.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/GameObject.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp > CMakeFiles/main.dir/src/GameObject.cpp.i
+CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.i"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.cpp > CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.i
 
-CMakeFiles/main.dir/src/GameObject.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/GameObject.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/GameObject.cpp -o CMakeFiles/main.dir/src/GameObject.cpp.s
-
-CMakeFiles/main.dir/src/Map.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Map.cpp.o: ../src/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/Map.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Map.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp
-
-CMakeFiles/main.dir/src/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Map.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp > CMakeFiles/main.dir/src/Map.cpp.i
-
-CMakeFiles/main.dir/src/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Map.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Map.cpp -o CMakeFiles/main.dir/src/Map.cpp.s
+CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.s"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.cpp -o CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.s
 
 CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o: ../src/Classes/DataTypes/Vector2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o"
 	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp
 
 CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.i: cmake_force
@@ -135,57 +122,55 @@ CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s"
 	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.cpp -o CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.s
 
-CMakeFiles/main.dir/src/Classes/Collision.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/Classes/Collision.cpp.o: ../src/Classes/Collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/Classes/Collision.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/Collision.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.cpp
+CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o: ../src/Classes/ECS/Collision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o"
+	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Collision.cpp
 
-CMakeFiles/main.dir/src/Classes/Collision.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/Collision.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.cpp > CMakeFiles/main.dir/src/Classes/Collision.cpp.i
+CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.i"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Collision.cpp > CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.i
 
-CMakeFiles/main.dir/src/Classes/Collision.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/Collision.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Collision.cpp -o CMakeFiles/main.dir/src/Classes/Collision.cpp.s
+CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.s"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Collision.cpp -o CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.s
 
-CMakeFiles/main.dir/src/ECS/ECS.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/src/ECS/ECS.cpp.o: ../src/ECS/ECS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/src/ECS/ECS.cpp.o"
-	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/ECS/ECS.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.cpp
+CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o: ../src/Classes/ECS/ECS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o"
+	em++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o -c /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.cpp
 
-CMakeFiles/main.dir/src/ECS/ECS.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/ECS/ECS.cpp.i"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.cpp > CMakeFiles/main.dir/src/ECS/ECS.cpp.i
+CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.i"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.cpp > CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.i
 
-CMakeFiles/main.dir/src/ECS/ECS.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/ECS/ECS.cpp.s"
-	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/ECS/ECS.cpp -o CMakeFiles/main.dir/src/ECS/ECS.cpp.s
+CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.s"
+	em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.cpp -o CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/src/Game.cpp.o" \
+"CMakeFiles/main.dir/src/Classes/Game.cpp.o" \
 "CMakeFiles/main.dir/src/main.cpp.o" \
-"CMakeFiles/main.dir/src/TextureManager.cpp.o" \
-"CMakeFiles/main.dir/src/GameObject.cpp.o" \
-"CMakeFiles/main.dir/src/Map.cpp.o" \
+"CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o" \
+"CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o" \
 "CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o" \
-"CMakeFiles/main.dir/src/Classes/Collision.cpp.o" \
-"CMakeFiles/main.dir/src/ECS/ECS.cpp.o"
+"CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o" \
+"CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main.js: CMakeFiles/main.dir/src/Game.cpp.o
+main.js: CMakeFiles/main.dir/src/Classes/Game.cpp.o
 main.js: CMakeFiles/main.dir/src/main.cpp.o
-main.js: CMakeFiles/main.dir/src/TextureManager.cpp.o
-main.js: CMakeFiles/main.dir/src/GameObject.cpp.o
-main.js: CMakeFiles/main.dir/src/Map.cpp.o
+main.js: CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o
+main.js: CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o
 main.js: CMakeFiles/main.dir/src/Classes/DataTypes/Vector2D.cpp.o
-main.js: CMakeFiles/main.dir/src/Classes/Collision.cpp.o
-main.js: CMakeFiles/main.dir/src/ECS/ECS.cpp.o
+main.js: CMakeFiles/main.dir/src/Classes/ECS/Collision.cpp.o
+main.js: CMakeFiles/main.dir/src/Classes/ECS/ECS.cpp.o
 main.js: CMakeFiles/main.dir/build.make
 main.js: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable main.js"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/game-rogue-sdl/game-rogue-sdl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable main.js"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
