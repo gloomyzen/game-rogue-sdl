@@ -75,7 +75,7 @@ jobs:
         shell: bash
         run: |
           mkdir build && cd build \
-          && cmake -DBUILD_TYPE=webassembly .. && make -j$(nproc)
+          && cmake -DBUILD_TYPE=webassembly -DCMAKE_BUILD_TYPE=Release .. && make -j$(nproc)
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:

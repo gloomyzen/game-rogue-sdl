@@ -72,5 +72,5 @@ jobs:
         shell: bash
         run: |
           mkdir build && cd build \
-          && cmake .. && make -j$(nproc) \
+          && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j$(nproc) \
           && ls

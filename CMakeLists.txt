@@ -65,6 +65,12 @@ if(${BUILD_TYPE} STREQUAL webassembly)
     #string(APPEND CMAKE_CXX_FLAGS " --llvm-opts 3")
     #string(APPEND CMAKE_CXX_FLAGS " -O3")
 
+    # Debug bar.
+    if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
+        message(FATAL_ERROR ${CMAKE_BUILD_TYPE})
+        file(READ ${CMAKE_CURRENT_SOURCE_DIR}/resources/stub/index-debug-section.html debug-bar)
+    endif()
+
     # Copy the index.html file.
     configure_file(
             ${CMAKE_CURRENT_SOURCE_DIR}/resources/stub/index.html
