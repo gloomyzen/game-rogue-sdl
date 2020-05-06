@@ -3,7 +3,7 @@
 #include "Components.h"
 #include "SDL.h"
 #include "../TextureManager.h"
-#include "../Classes/Animation.h"
+#include "Animation.h"
 #include <map>
 
 class SpriteComponent : public Component {

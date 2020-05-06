@@ -1,19 +1,22 @@
 #pragma once
 
-#include "Game.h"
-#include "ECS/ECS.h"
-#include "ECS/Components.h"
+#include "../IObject.h"
+#include "../Game.h"
+#include "../ECS/ECS.h"
+#include "../ECS/Components.h"
 
-class GameObject {
+class GameObject : public IObject {
 
 public:
-    static Manager components;
+//    static Manager components;
     GameObject();
     GameObject(int x, int y);
 //    GameObject(const char *textureSheet, int x, int y);
     ~GameObject();
-    void Update();
-    void Render();
+    void init();
+    void update();
+    void draw();
+    void destroy();
 private:
 
 //    int xPosition, yPosition;

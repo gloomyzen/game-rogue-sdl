@@ -7,5 +7,5 @@
 #include "TouchController.h"
 #include "ColliderController.h"
 #include "CameraComponent.h"
-#include "../Classes/Collision.h"
-#include "../Classes/Animation.h"
+#include "Collision.h"
+#include "Animation.h"

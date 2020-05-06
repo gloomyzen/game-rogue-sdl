@@ -3,8 +3,8 @@
 #include <string>
 #include "SDL.h"
 #include "Components.h"
-#include "../Classes/DataTypes/Vector2D.h"
-#include "../Classes/Collision.h"
+#include "../DataTypes/Vector2D.h"
+#include "Collision.h"
 
 class ColliderController : public Component {
 public:

@@ -7,14 +7,14 @@ project(ROGUE_SDL
 
 # The main executable
 add_executable(main
-        src/Game.cpp
+        src/Classes/Game.cpp
         src/main.cpp
-        src/TextureManager.cpp
-        src/GameObject.cpp
-        src/Map.cpp
+        src/Classes/TextureManager.cpp
+        src/Classes/GameObjects/GameObject.cpp
+#        src/Scene.cpp
         src/Classes/DataTypes/Vector2D.cpp
-        src/Classes/Collision.cpp
-        src/ECS/ECS.cpp
+        src/Classes/ECS/Collision.cpp
+        src/Classes/ECS/ECS.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)
