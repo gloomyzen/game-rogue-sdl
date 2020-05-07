@@ -33,8 +33,8 @@ public:
     }
 
     void update() override {
-        //TODO try to use and create TouchController
-//        Game::event.tfinger
+        //TODO need try to use Game::event.tfinger.dx|dy
+        // event.tfinger.dx|dy contain the distance moved in the x-axis, normalized (-1...1)
         if (Game::event.type == SDL_FINGERDOWN) {
             isActive = true;
             touchX = Game::event.tfinger.x;
