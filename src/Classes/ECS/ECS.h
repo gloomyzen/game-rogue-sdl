@@ -35,7 +35,23 @@ using GroupBitset = std::bitset<maxGroups>;
 
 using ComponentArray = std::array<Component*, maxComponents>;
 
-class Component
+class IComponent {
+private:
+    bool isActive = true;
+
+public:
+    Entity* entity{};
+
+    virtual void init() {}
+    virtual void update() {}
+    virtual void draw() {}
+    void destroy() { isActive = false; }
+
+    bool getActive() { return isActive; };
+    void setActive(bool active) { isActive = active; };
+};
+
+class Component : public IComponent
 {
 public:
     Entity* entity{};
@@ -50,7 +66,7 @@ class Entity
 {
 private:
     Manager& manager;
-    bool active = true;
+    bool isActive = true;
     std::vector<std::unique_ptr<Component>> components;
 
     ComponentArray componentArray{};
@@ -62,15 +78,19 @@ public:
 
     void update()
     {
-        for (auto& c : components) c->update();
+        for (auto& c : components) {
+            if(c->getActive()) c->update();
+        }
     }
     void draw()
     {
-        for (auto& c : components) c->draw();
+        for (auto& c : components) {
+            if (c->getActive()) c->draw();
+        }
     }
 
-    [[nodiscard]] bool isActive() const { return active; }
-    void destroy() { active = false; }
+    [[nodiscard]] bool getActive() const { return isActive; }
+    void destroy() { isActive = false; }
 
     bool hasGroup(Group mGroup)
     {
@@ -134,7 +154,7 @@ public:
                     std::remove_if(std::begin(v), std::end(v),
                     [i](Entity* mEntity)
                          {
-                            return !mEntity->isActive() || !mEntity->hasGroup(i);
+                            return !mEntity->getActive() || !mEntity->hasGroup(i);
                          }),
                          std::end(v)
             );
@@ -143,7 +163,7 @@ public:
         entities.erase(std::remove_if(std::begin(entities), std::end(entities),
             [](const std::unique_ptr<Entity> &mEntity)
             {
-                return !mEntity->isActive();
+                return !mEntity->getActive();
             }),
             std::end(entities));
     }
