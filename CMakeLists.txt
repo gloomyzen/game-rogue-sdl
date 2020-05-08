@@ -1,11 +1,15 @@
-# Projects Settings
+#------------------------------------------------------------------------------
+# General Projects Settings
+#------------------------------------------------------------------------------
 cmake_minimum_required (VERSION 3.1)
 project(ROGUE_SDL
         LANGUAGES CXX
         VERSION 1.0.0
 )
 
+#------------------------------------------------------------------------------
 # The main executable
+#------------------------------------------------------------------------------
 add_executable(main
         src/Classes/Game.cpp
         src/main.cpp
@@ -34,7 +38,28 @@ if(NOT BUILD_TYPE)
     set(BUILD_TYPE ${BUILD_TYPE} "desktop")
 endif()
 
+include(ExternalProject)
+find_package(Git)
+if(NOT GIT_FOUND)
+    message(FATAL_ERROR "Git not found!")
+endif()
+
+#todo need package manager
+#nlohmann_json
+#if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
+#    message(STATUS "Downloading nlohmann_json from https://github.com/conan-io/cmake-conan")
+#    file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/v0.14/conan.cmake"
+#            "${CMAKE_BINARY_DIR}/conan.cmake")
+#endif()
+#
+#include(${CMAKE_BINARY_DIR}/conan.cmake)
+#
+#conan_cmake_run(CONANFILE cmake/conanfile.txt
+#        BASIC_SETUP NO_OUTPUT_DIRS)
+
+#------------------------------------------------------------------------------
 # Detect emscripten is used.
+#------------------------------------------------------------------------------
 if(${BUILD_TYPE} STREQUAL webassembly)
 
     set(CMAKE_C_COMPILER "emcc")
