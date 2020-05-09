@@ -122,17 +122,56 @@ if(${BUILD_TYPE} STREQUAL webassembly)
 
 else() # Not Web
 
+    if (APPLE)
+#        execute_process (
+#                COMMAND bash -c "(echo \"$(brew --prefix sdl2)\")"
+#                OUTPUT_VARIABLE SDL2_PATH
+#        )
+#        if (SDL2_PATH)
+#             Homebrew installs sdl2 in /usr/local/opt/sdl2.
+#            list(APPEND CMAKE_PREFIX_PATH "${SDL2_PATH}")
+#        else()
+#            message(WARNING "Required dependence \"sdl2\" not found on the path /usr/local/opt/sdl2")
+#        endif()
+        if(NOT EXISTS "${CMAKE_SOURCE_DIR}/lib/macOS/SDL2.framework")
+                message("Downloading SDL2 frameworks")
+                execute_process(
+                        COMMAND "chmod +x ${CMAKE_SOURCE_DIR}/lib/macOS/install.sh"
+                        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/lib/macOS")
+                execute_process(
+                        COMMAND "${CMAKE_SOURCE_DIR}/lib/macOS/install.sh"
+                        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/lib/macOS")
+        endif()
+        set(SDL_INCLUDE_DIR "")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -F ${CMAKE_SOURCE_DIR}/lib/macOS")
+        set(CMAKE_EXE_LINKER_FLAGS "-Wl,-F${CMAKE_SOURCE_DIR}/lib/macOS -Wl,-rpath ${CMAKE_SOURCE_DIR}/lib/macOS -framework Cocoa")
+        set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS}")
+        set(SDL_LIBRARY
+        "-framework SDL2"
+        "-framework SDL2_ttf"
+        "-framework SDL2_mixer"
+        "-framework SDL2_image"
+        )
+        set(SDL_EXPORT_LIBRARIES
+        "${CMAKE_SOURCE_DIR}/lib/macOS/SDL2.framework"
+        "${CMAKE_SOURCE_DIR}/lib/macOS/SDL2_ttf.framework"
+        "${CMAKE_SOURCE_DIR}/lib/macOS/SDL2_mixer.framework"
+        "${CMAKE_SOURCE_DIR}/lib/macOS/SDL2_image.framework"
+        )
+        mark_as_advanced(SDL_INCLUDE_DIR SDL_LIBRARY)
+    endif()
 
-    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/sdl2")
 
     find_package(SDL2 REQUIRED)
     find_package(SDL2_image REQUIRED)
-    include_directories(${SDL2_INCLUDE_DIRS})
+
     include_directories(${SDL2_IMAGE_DIRS})
 
     file(COPY "${CMAKE_SOURCE_DIR}/resources/sprites/"
             DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources/sprites)
 
-    target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+#    target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
+    target_link_libraries(main SDL2::Main SDL2::Image)
 
 endif()
