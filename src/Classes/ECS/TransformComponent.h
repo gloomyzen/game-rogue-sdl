@@ -74,8 +74,8 @@ public:
 
 private:
     float getMovement(const float *pVelocity, float *pMovement, const double *pDeltaTime) {
-        if (std::abs(*pVelocity) > 0 && ((*pVelocity > 0 && *pMovement >= 0) || (*pVelocity < 0 && *pMovement <= 0))) {
-            if (std::abs(*pMovement + (deltaSpeed / *pDeltaTime)) <= maxSpeed) {
+        if (abs(*pVelocity) > 0 && ((*pVelocity > 0 && *pMovement >= 0) || (*pVelocity < 0 && *pMovement <= 0))) {
+            if (abs(*pMovement + (deltaSpeed / *pDeltaTime)) <= maxSpeed) {
                 *pMovement = *pMovement + (deltaSpeed / *pDeltaTime) * *pVelocity;
             } else {
                 *pMovement = maxSpeed * *pVelocity;
@@ -83,10 +83,10 @@ private:
         } else {
             if (*pMovement > 0) {
                 *pMovement = *pMovement - (deltaSpeed / *pDeltaTime * 2);
-                *pMovement = std::abs(*pMovement) > 0.1f ? *pMovement : 0;
+                *pMovement = abs(*pMovement) > 0.1f ? *pMovement : 0;
             } else if (*pMovement < 0) {
                 *pMovement = *pMovement + (deltaSpeed / *pDeltaTime * 2);
-                *pMovement = std::abs(*pMovement) > 0.1f ? *pMovement : 0;
+                *pMovement = abs(*pMovement) > 0.1f ? *pMovement : 0;
             } else {
                 *pMovement = 0;
             }

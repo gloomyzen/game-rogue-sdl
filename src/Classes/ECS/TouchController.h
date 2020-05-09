@@ -41,12 +41,12 @@ public:
         if (Game::event.type == SDL_FINGERMOTION) {
             motionX = Game::event.tfinger.x;
             motionY = Game::event.tfinger.y;
-            if (std::abs(touchX - motionX) > 0.01f && touchX < motionX) {
+            if (abs(touchX - motionX) > 0.01f && touchX < motionX) {
                 transform->velocity.x = 1;
                 motionY = Game::event.tfinger.y;
                 sprite->play("Walk");
                 sprite->spriteFlip = SDL_FLIP_NONE;
-            } else if (std::abs(touchX - motionX) > 0.01f && touchX > motionX) {
+            } else if (abs(touchX - motionX) > 0.01f && touchX > motionX) {
                 transform->velocity.x = -1;
                 motionY = Game::event.tfinger.y;
                 sprite->play("Walk");
@@ -54,11 +54,11 @@ public:
             } else {
                 transform->velocity.x = 0;
             }
-            if (std::abs(touchY - motionY) > 0.01f && touchY < motionY) {
+            if (abs(touchY - motionY) > 0.01f && touchY < motionY) {
                 transform->velocity.y = 1;
                 motionX = Game::event.tfinger.x;
                 sprite->play("Walk");
-            } else if (std::abs(touchY - motionY) > 0.01f && touchY > motionY) {
+            } else if (abs(touchY - motionY) > 0.01f && touchY > motionY) {
                 transform->velocity.y = -1;
                 motionX = Game::event.tfinger.x;
                 sprite->play("Walk");
