@@ -2,7 +2,7 @@
 #define ROGUE_SDL_GAME_H
 
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include <SDL2_image/SDL_image.h>
 #include <iostream>
 
 #ifdef __EMSCRIPTEN__

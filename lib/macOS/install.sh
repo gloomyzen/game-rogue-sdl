@@ -22,6 +22,7 @@ function dosdl() {
     print "Unmounting and removing $2.dmg"
     hdiutil detach /Volumes/$2/ > /dev/null || exit $?
     rm $2.dmg || exit $?
+#    sudo cp -HR $2.framework /Library/Frameworks/
 }
 
 rm -r *.framework 2> /dev/null
