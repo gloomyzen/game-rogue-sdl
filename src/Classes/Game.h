@@ -1,11 +1,15 @@
 #ifndef ROGUE_SDL_GAME_H
 #define ROGUE_SDL_GAME_H
 
-#include <SDL2/SDL.h>
-#include <SDL2_image/SDL_image.h>
 #include <iostream>
+#include <SDL2/SDL.h>
+#if defined(__APPLE__)
+#include <SDL2_image/SDL_image.h>
+#else
+#include <SDL2/SDL_image.h>
+#endif //__APPLE__
 
-#ifdef __EMSCRIPTEN__
+#if defined(__EMSCRIPTEN__)
 #include <emscripten.h>
 #define EMSCRIPTEN_FLAG 0;
 #else

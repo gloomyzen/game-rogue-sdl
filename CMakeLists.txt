@@ -127,6 +127,7 @@ else() # Not Web
             DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources/sprites)
 
     if (APPLE)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__APPLE__")
         if(NOT EXISTS "${CMAKE_SOURCE_DIR}/lib/macOS/SDL2.framework")
                 message("Downloading SDL2 frameworks")
                 execute_process(
