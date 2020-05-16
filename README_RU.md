@@ -7,8 +7,14 @@
 
 [Click to play on web](https://gloomyzen.github.io/game-rogue-sdl/)
 
-#### Usage (WebAssembly) :
-Install emscripten, then
+#### В самом начале вам необходимо установить все гит модули
+```bash
+git clone --recurse-submodules git@github.com:gloomyzen/game-rogue-sdl.git game-rogue-sdl 
+cd game-rogue-sdl
+```
+
+#### Сбора WebAssembly:
+Для работы нужно установить компилятор emscripten
 ```bash
 mkdir public
 cd public
@@ -16,7 +22,7 @@ cmake -DBUILD_TYPE=webassembly ..
 make -j$(nproc)
 ```
 
-#### Usage (Linux) :
+#### Сборка десктоп версии Linux/MacOs:
 
 ```bash
 mkdir build

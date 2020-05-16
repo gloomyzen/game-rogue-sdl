@@ -7,6 +7,12 @@ English | [Russian](https://github.com/gloomyzen/game-rogue-sdl/blob/master/READ
 
 [Click to play on web](https://gloomyzen.github.io/game-rogue-sdl/)
 
+#### First of all, be sure to clone all submodules:
+```bash
+git clone --recurse-submodules git@github.com:gloomyzen/game-rogue-sdl.git game-rogue-sdl 
+cd game-rogue-sdl
+```
+
 #### Usage (WebAssembly) :
 Install emscripten, then
 ```bash
