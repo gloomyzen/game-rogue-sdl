@@ -1,10 +1,9 @@
 #------------------------------------------------------------------------------
 # General Projects Settings
 #------------------------------------------------------------------------------
-cmake_minimum_required (VERSION 3.1)
+cmake_minimum_required (VERSION 3.11)
 project(ROGUE_SDL
         LANGUAGES CXX
-        VERSION 1.0.0
 )
 
 #------------------------------------------------------------------------------
@@ -44,19 +43,6 @@ find_package(Git)
 if(NOT GIT_FOUND)
     message(FATAL_ERROR "Git not found!")
 endif()
-
-#todo need package manager
-#nlohmann_json
-#if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
-#    message(STATUS "Downloading nlohmann_json from https://github.com/conan-io/cmake-conan")
-#    file(DOWNLOAD "https://github.com/conan-io/cmake-conan/raw/v0.14/conan.cmake"
-#            "${CMAKE_BINARY_DIR}/conan.cmake")
-#endif()
-#
-#include(${CMAKE_BINARY_DIR}/conan.cmake)
-#
-#conan_cmake_run(CONANFILE cmake/conanfile.txt
-#        BASIC_SETUP NO_OUTPUT_DIRS)
 
 #------------------------------------------------------------------------------
 # Detect emscripten is used.
@@ -172,4 +158,21 @@ else() # Not Web
     target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
 
+endif()
+
+#------------------------------------------------------------------------------
+# Tests section
+#------------------------------------------------------------------------------
+include(FetchContent)
+
+FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG        release-1.8.0
+)
+
+FetchContent_GetProperties(googletest)
+if(NOT googletest_POPULATED)
+    FetchContent_Populate(googletest)
+    add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
 endif()
