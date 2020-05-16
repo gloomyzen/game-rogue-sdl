@@ -39,7 +39,6 @@ endif()
 
 include(ExternalProject)
 find_package(Git)
-find_package(Git)
 if(NOT GIT_FOUND)
     message(FATAL_ERROR "Git not found!")
 endif()
@@ -163,16 +162,6 @@ endif()
 #------------------------------------------------------------------------------
 # Tests section
 #------------------------------------------------------------------------------
-include(FetchContent)
 
-FetchContent_Declare(
-        googletest
-        GIT_REPOSITORY https://github.com/google/googletest.git
-        GIT_TAG        release-1.8.0
-)
-
-FetchContent_GetProperties(googletest)
-if(NOT googletest_POPULATED)
-    FetchContent_Populate(googletest)
-    add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BINARY_DIR})
-endif()
+enable_testing()
+add_subdirectory(tests)
