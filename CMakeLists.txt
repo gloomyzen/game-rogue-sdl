@@ -106,7 +106,11 @@ if(${BUILD_TYPE} STREQUAL webassembly)
     )
 
     # Allow the resource directories to be fetched by the web browser.
-    file(GLOB assets_files "${CMAKE_SOURCE_DIR}/resources/sprites/*" "${CMAKE_SOURCE_DIR}/resources/font/*.ttf")
+    file(GLOB assets_files
+            "${CMAKE_SOURCE_DIR}/resources/sprites/*"
+            "${CMAKE_SOURCE_DIR}/resources/font/*.ttf"
+            "${CMAKE_SOURCE_DIR}/resources/data/*.json"
+            )
     foreach(file ${assets_files})
         file(RELATIVE_PATH relative_file ${CMAKE_SOURCE_DIR} ${file})
         string(APPEND CMAKE_CXX_FLAGS " --preload-file ${file}@/${relative_file}")
@@ -117,6 +121,8 @@ else() # Not Web
 
     file(COPY "${CMAKE_SOURCE_DIR}/resources/sprites/"
             DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources/sprites)
+    file(COPY "${CMAKE_SOURCE_DIR}/resources/data/"
+            DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/resources/data)
 
     if (APPLE)
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__APPLE__")
