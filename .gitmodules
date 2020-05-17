@@ -1,4 +1,4 @@
 [submodule "lib/rapidjson"]
 	path = lib/rapidjson
-	url = git@github.com:miloyip/rapidjson.git
+	url = https://github.com/Tencent/rapidjson.git
 
