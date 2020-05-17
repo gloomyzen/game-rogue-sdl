@@ -1,6 +1,4 @@
-//
-// Created by Artur Barilo on 17.05.2020.
-//
+/* Created by efreyu on 17.05.2020. */
 
 #include <gtest/gtest.h>
 #include "rapidjson/document.h"
