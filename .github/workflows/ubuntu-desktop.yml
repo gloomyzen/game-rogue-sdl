@@ -23,18 +23,24 @@ jobs:
     name: Ubuntu 18.04
     runs-on: ubuntu-latest
 
+    env:
+      GIT: "https://github.com"
+      CMAKE_VER: "3.17.0"
+      MANUAL_CACHING: "6"
+      AUTO_CACHING: "1"
+
     steps:
 
       - name: Get repository name.
         run: echo ::set-env name=REPO_NAME::${GITHUB_REPOSITORY##*/}
 
-      - name: Apt install.
+      - name: Apt install. 🛠
         shell: bash
         run: |
           sudo apt-get update -y
           sudo apt-get dist-upgrade -y
           sudo apt-get install -y --fix-missing \
-          git zip cron curl cmake wget python llvm libxml2-dev build-essential libssl-dev software-properties-common \
+          git zip cron curl wget python llvm libxml2-dev build-essential libssl-dev software-properties-common \
           checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
           libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-2.0-0 libsdl2-dev libsdl2-image-dev \
           libsdl2-mixer-dev libsdl2-net-dev libsdl2-ttf-dev libsdl2-gfx-dev
@@ -44,6 +50,30 @@ jobs:
         with:
           submodules: recursive
           path: ${{ env.REPO_NAME }}
+
+      - name: First set up. ☕️
+        shell: bash
+        run: |
+          emcc -v > CACHE_KEY.txt
+          echo $MANUAL_CACHING >> CACHE_KEY.txt
+          if [ "$AUTO_CACHING" == "1" ]; then
+            thisFile=$REPO_NAME/.github/workflows/ubuntu-desktop.yml
+            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
+          fi
+          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
+          echo ::set-env name=CACHE_KEY::$md5cache
+
+      - name: Build CMake. 🔨
+        shell: bash
+        run: |
+          mkdir /var/cmake && cd /var/cmake
+          file=cmake-$CMAKE_VER-Linux-x86_64.sh
+          wget $GIT/Kitware/CMake/releases/download/v$CMAKE_VER/$file
+          sudo mkdir /opt/cmake
+          sudo sh $file --prefix=/opt/cmake --skip-license
+          sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
+          rm $file
+          cmake --version
 
       - name: Get resources.
         shell: bash
@@ -55,18 +85,6 @@ jobs:
           cd resources/sprites \
           && wget --http-user="$ASSETS_USER" --http-passwd="$ASSETS_PASSWORD" --no-check-certificate "$ASSETS_HOST" \
           && tar -xvf assets.tar.gz
-
-#      - name: First set up.
-#        shell: bash
-#        run: |
-#          emcc -v > CACHE_KEY.txt
-#          echo $MANUAL_CACHING >> CACHE_KEY.txt
-#          if [ "$AUTO_CACHING" == "1" ]; then
-#            thisFile=$REPO_NAME/.github/workflows/ubuntu-desktop.yml
-#            echo `md5sum $thisFile | cut -c -32` >> CACHE_KEY.txt
-#          fi
-#          md5cache=$(md5sum CACHE_KEY.txt | cut -c -32)
-#          echo ::set-env name=CACHE_KEY::$md5cache
 
       - name: Build. 🔧
         shell: bash

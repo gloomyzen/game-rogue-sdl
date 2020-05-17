@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 ####################### Install utilities and emsdk #######################
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --fix-missing \
-    git zip cron curl cmake wget python llvm libxml2-dev build-essential libssl-dev \
+    git zip cron curl wget python llvm libxml2-dev build-essential libssl-dev \
     checkinstall libx11-dev libxext-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev libxml2-dev \
     libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libsdl2-dev \
     && cd /var && git clone https://github.com/emscripten-core/emsdk.git emsdk && cd emsdk \
@@ -13,7 +13,12 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --fix-mi
     && echo "source /var/emsdk/emsdk_env.sh" >> /etc/profile \
     && emcc --version
 
-####################### Install nodejs via nvm #######################
+#######################    Install latest CMake    #######################
+RUN mkdir /var/cmake && cd /var/cmake && wget https://github.com/Kitware/CMake/releases/download/v3.17.2/cmake-3.17.2.tar.gz \
+    && tar -zxvf cmake-3.17.2.tar.gz && ls && cd cmake-3.17.2 && ls && ./bootstrap && make && make install \
+    && cmake --version
+
+#######################   Install nodejs via nvm   #######################
 #RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash \
 #    && export NVM_DIR="$HOME/.nvm" \
 #    && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" \

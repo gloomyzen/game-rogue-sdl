@@ -46,6 +46,7 @@ endif()
 #------------------------------------------------------------------------------
 # General dependencies.
 #------------------------------------------------------------------------------
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/lib/rapidjson/include
 )
@@ -85,7 +86,6 @@ if(${BUILD_TYPE} STREQUAL webassembly)
 
     # Debug bar.
     if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-        message(FATAL_ERROR ${CMAKE_BUILD_TYPE})
         file(READ ${CMAKE_CURRENT_SOURCE_DIR}/resources/stub/index-debug-section.html debug-bar)
     endif()
 
@@ -152,8 +152,6 @@ else() # Not Web
         include_directories(${SDL_INCLUDE_DIR})
 
     endif()
-
-    set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 
     find_package(SDL2 REQUIRED)
     find_package(SDL2_image REQUIRED)
