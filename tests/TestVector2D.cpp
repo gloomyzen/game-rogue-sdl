@@ -31,3 +31,10 @@ TEST(Vector2D, VectorAddTest) {
     EXPECT_EQ(vector1.x ,vectorExpect.x + vector2.x);
     EXPECT_EQ(vector1.y ,vectorExpect.y + vector2.y);
 }
+
+TEST(Vector2D, VectorMultiplyTest) {
+    Vector2D vector1(1, 1);
+    vector1 = vector1 * 5;
+    EXPECT_EQ(vector1.x, 5);
+    EXPECT_EQ(vector1.y, 5);
+}
