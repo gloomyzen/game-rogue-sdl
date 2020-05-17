@@ -54,7 +54,7 @@ jobs:
       - name: First set up. ☕️
         shell: bash
         run: |
-          emcc -v > CACHE_KEY.txt
+          g++ -v > CACHE_KEY.txt
           echo $MANUAL_CACHING >> CACHE_KEY.txt
           if [ "$AUTO_CACHING" == "1" ]; then
             thisFile=$REPO_NAME/.github/workflows/ubuntu-desktop.yml
@@ -91,4 +91,4 @@ jobs:
         run: |
           mkdir build && cd build \
           && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j$(nproc) \
-          && ls
+          && make test

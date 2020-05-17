@@ -161,12 +161,11 @@ else() # Not Web
 
     target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
-
-endif()
-
 #------------------------------------------------------------------------------
 # Tests section
 #------------------------------------------------------------------------------
 
 enable_testing()
 add_subdirectory(tests)
+
+endif()
