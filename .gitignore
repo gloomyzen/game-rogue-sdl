@@ -5,6 +5,7 @@
 #Other files
 *.sql
 *.bk
+*.DS_Store
 
 #Temp build folders
 build
