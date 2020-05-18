@@ -1,9 +1,7 @@
 /* Created by efreyu on 17.05.2020. */
 
 #include <gtest/gtest.h>
-#include <rapidjson/document.h>
-#include <rapidjson/istreamwrapper.h>
-#include <fstream>
+#include "../src/Classes/Utilities/JsonLoadManager.h"
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
@@ -26,7 +24,24 @@ int main(int argc, char** argv) {
 //    ASSERT_TRUE(d.IsObject());
 }*/
 
+/*
+ * test without constructor
+ */
 TEST(LevelLoad, FirstLoadLevel) {
-    LoadManager
+    const char* file = "../resources/data/level1.json";
+    JsonLoadManager manager1;
+    manager1.loadFile(file);
+    EXPECT_EQ(manager1.getPath(), file);
+    ASSERT_TRUE(manager1.isLoaded());
+}
+
+/*
+ * test with constructor
+ */
+TEST(LevelLoad, SecondLoadLevel) {
+    const char* file = "../resources/data/level1.json";
+    JsonLoadManager manager1(file);
+    EXPECT_EQ(manager1.getPath(), file);
+    ASSERT_TRUE(manager1.isLoaded());
 }
 
