@@ -6,7 +6,10 @@
     "name": "Scene 1",
     "width": 5000,
     "height": 1000,
-    "start_position": {"x": 50, "y": 50},
+    "start_position": {
+      "x": 50,
+      "y": 50
+    },
     "objects": []
   }]
 }
