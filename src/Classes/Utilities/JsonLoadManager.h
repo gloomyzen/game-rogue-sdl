@@ -33,6 +33,8 @@ public:
 
     bool isLoaded() const { return mLoaded; }
 
+    rapidjson::Document &getDocument() { return mDocument; }
+
 
 };
 
