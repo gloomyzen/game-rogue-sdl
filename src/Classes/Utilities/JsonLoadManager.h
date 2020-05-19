@@ -9,32 +9,21 @@
 
 class JsonLoadManager {
 private:
-    const char* mPath;
+    const char* mPath{};
     bool mLoaded = false;
     rapidjson::Document mDocument;
 
 public:
-    JsonLoadManager() {}
-    JsonLoadManager(const char* filePath) : mPath(filePath) {
-        loadFile(mPath);
-    };
-    void loadFile(const char* filePath) {
-        mPath = filePath;
-        std::ifstream ifs(mPath);
-        rapidjson::IStreamWrapper isw(ifs);
-        mDocument.ParseStream(isw);
-        if (mDocument.HasParseError()) return;
-        if (mDocument.GetType() != 0) mLoaded = true;
-    }
+    JsonLoadManager() = default;
+    explicit JsonLoadManager(const char* filePath);;
 
-    const char* getPath() {
-        return mPath;
-    }
+    void loadFile(const char* filePath);
 
-    bool isLoaded() const { return mLoaded; }
+    const char* getPath() { return mPath; }
+
+    [[nodiscard]] bool isLoaded() const { return mLoaded; }
 
     rapidjson::Document &getDocument() { return mDocument; }
-
 
 };
 
