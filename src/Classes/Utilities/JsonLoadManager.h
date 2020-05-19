@@ -12,19 +12,22 @@
  */
 class JsonLoadManager {
 private:
-    const char* mPath{};
-    bool mLoaded = false;
+    const char* mPath;
+    bool mLoaded;
     rapidjson::Document mDocument;
 
 public:
-    JsonLoadManager() = default;
-    explicit JsonLoadManager(const char* filePath);
+    JsonLoadManager() {
+        mLoaded = false;
+    };
 
-    void loadFile(const char* filePath);
+    explicit JsonLoadManager(const char* &filePath);
+
+    void loadFile(const char* &filePath);
 
     const char* getPath() { return mPath; }
 
-    [[nodiscard]] bool isLoaded() const { return mLoaded; }
+    bool isLoaded() const { return mLoaded; }
 
     rapidjson::Document &getDocument() { return mDocument; }
 
