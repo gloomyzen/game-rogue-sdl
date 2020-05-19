@@ -7,6 +7,9 @@
 #include <rapidjson/istreamwrapper.h>
 #include <fstream>
 
+/*
+ * Expected logic: load resources.json -> load the desired level -> load the objects indicated in the level list (objects, tiles, items)
+ */
 class JsonLoadManager {
 private:
     const char* mPath{};
@@ -15,7 +18,7 @@ private:
 
 public:
     JsonLoadManager() = default;
-    explicit JsonLoadManager(const char* filePath);;
+    explicit JsonLoadManager(const char* filePath);
 
     void loadFile(const char* filePath);
 
