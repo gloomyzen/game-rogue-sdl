@@ -38,8 +38,7 @@ TEST(LevelLoad, SecondLoadLevel) {
 TEST(LoadManager, FirstLoad) {
     const char* file = "../resources/data/resources.json";
     LoadManager manager(file);
-    manager.load();
-    ASSERT_TRUE(manager.isLoaded());
+    ASSERT_FALSE(manager.isLoaded());
 //    EXPECT_EQ(manager.getScene()->First());
 }
 

@@ -23,6 +23,13 @@ public:
 
     explicit JsonLoadManager(const char* &filePath);
 
+    ~JsonLoadManager() {
+        mLoaded = false;
+        delete mPath;
+        mDocument.Clear();
+    };
+
+    //TODO insert XMLHttpRequest for emscripten
     void loadFile(const char* &filePath);
 
     const char* getPath() { return mPath; }

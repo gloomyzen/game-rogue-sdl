@@ -1,7 +1,7 @@
 [
-  {"type": "level", "path": "level1.json"},
-  {"type": "level", "path": "level2.json"},
-  {"type": "level", "path": "level3.json"},
+  {"type": "scene", "path": "level1.json"},
+  {"type": "scene", "path": "level2.json"},
+  {"type": "scene", "path": "level3.json"},
   {"type": "game_object", "path": "object1.json"},
   {"type": "game_object", "path": "object2.json"}
 ]
