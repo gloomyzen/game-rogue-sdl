@@ -17,10 +17,3 @@ set (TEST_LIB_INCLUDE_PATH  ${CATCH_INCLUDE_PATH})
 #export vars
 set (LIB_INCLUDE_PATH  ${LIB_INCLUDE_PATH} PARENT_SCOPE)
 set (TEST_LIB_INCLUDE_PATH  ${TEST_LIB_INCLUDE_PATH} PARENT_SCOPE)
-
-# -------------------------------------------------------------------------
-# rapidjson
-
-include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/rapidjson/include
-)
