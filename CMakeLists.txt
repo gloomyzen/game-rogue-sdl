@@ -50,9 +50,7 @@ endif()
 # General dependencies.
 #------------------------------------------------------------------------------
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
-include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/rapidjson/include
-)
+add_subdirectory (lib EXCLUDE_FROM_ALL)
 
 #------------------------------------------------------------------------------
 # Detect emscripten is used.
