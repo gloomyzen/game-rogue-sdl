@@ -2,7 +2,8 @@
 # General Projects Settings
 #------------------------------------------------------------------------------
 cmake_minimum_required (VERSION 3.11)
-project(ROGUE_SDL
+set(PROJECT_NAME ROGUE_SDL)
+project(${PROJECT_NAME}
         LANGUAGES CXX
 )
 
@@ -173,7 +174,7 @@ else() # Not Web
 # Tests section
 #------------------------------------------------------------------------------
 
-enable_testing()
-add_subdirectory(tests)
+    enable_testing()
+    add_subdirectory(tests)
 
 endif()
