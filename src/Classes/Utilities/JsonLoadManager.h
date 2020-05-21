@@ -15,18 +15,19 @@ private:
     const char* mPath;
     bool mLoaded;
     rapidjson::Document mDocument;
+    bool mDocumentAllocated;
 
 public:
     JsonLoadManager() {
         mLoaded = false;
+        mDocumentAllocated = false;
     };
 
     explicit JsonLoadManager(const char* &filePath);
 
     ~JsonLoadManager() {
         mLoaded = false;
-        delete mPath;
-        mDocument.Clear();
+        if (mDocumentAllocated) mDocument.Clear();
     };
 
     //TODO insert XMLHttpRequest for emscripten

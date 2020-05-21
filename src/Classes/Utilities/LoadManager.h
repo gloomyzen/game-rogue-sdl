@@ -11,7 +11,7 @@
 class LoadManager {
 private:
     bool mLoaded;
-    JsonLoadManager* pJsonManager;
+    JsonLoadManager jsonManager;
 //    std::map<std::string, Scene> mScenes;
 //    std::map<std::string, GameObject> mGameObjects;
 
@@ -24,15 +24,14 @@ private:
 public:
     explicit LoadManager(const char* &filePath) {
         mLoaded = false;
-        pJsonManager->loadFile(filePath);
-        if (pJsonManager->isLoaded()) {
+        jsonManager.loadFile(filePath);
+        if (jsonManager.isLoaded()) {
             Parse();
         }
     }
 
     ~LoadManager() {
         mLoaded = false;
-        delete pJsonManager;
     }
 
     bool isLoaded() const { return mLoaded; }

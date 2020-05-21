@@ -12,6 +12,9 @@ void JsonLoadManager::loadFile(const char* &filePath) {
     std::ifstream ifs(mPath);
     rapidjson::IStreamWrapper isw(ifs);
     mDocument.ParseStream(isw);
+    mDocumentAllocated = true;
     if (mDocument.HasParseError()) return;
-    if (mDocument.GetType() != 0) mLoaded = true;
+    if (mDocument.GetType() != 0) {
+        mLoaded = true;
+    }
 }
