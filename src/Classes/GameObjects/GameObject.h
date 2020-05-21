@@ -9,14 +9,13 @@ class GameObject : public IObject {
 
 public:
 //    static Manager components;
-    GameObject();
+    GameObject() = default;
     GameObject(int x, int y);
-//    GameObject(const char *textureSheet, int x, int y);
-    ~GameObject();
-    void init();
-    void update();
-    void draw();
-    void destroy();
+    ~GameObject() = default;
+    void init() {};
+    void update() {};
+    void draw() {};
+    void destroy() {};
 private:
 
 //    int xPosition, yPosition;
