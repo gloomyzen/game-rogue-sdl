@@ -18,8 +18,8 @@ add_executable(main
         src/Classes/DataTypes/Vector2D.cpp
         src/Classes/ECS/Collision.cpp
         src/Classes/ECS/ECS.cpp
-        src/Classes/Utilities/LoadManager.cpp
-        src/Classes/Utilities/JsonLoadManager.cpp
+#        src/Classes/Utilities/LoadManager.cpp
+#        src/Classes/Utilities/JsonLoadManager.cpp
         )
 
 set_property(TARGET main PROPERTY CXX_STANDARD 17)

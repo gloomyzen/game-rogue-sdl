@@ -4,16 +4,16 @@
 #define ROGUE_SDL_LOADMANAGER_H
 
 #include "JsonLoadManager.h"
-#include "../Scenes/Scenes.h"
-#include "../GameObjects/GameObject.h"
+//#include "../Scenes/Scenes.h"
+//#include "../GameObjects/GameObject.h"
 #include <map>
 
 class LoadManager {
 private:
     bool mLoaded;
     JsonLoadManager* pJsonManager;
-    std::map<std::string, Scene> mScenes;
-    std::map<std::string, GameObject> mGameObjects;
+//    std::map<std::string, Scene> mScenes;
+//    std::map<std::string, GameObject> mGameObjects;
 
     void Parse() {
         //TODO recursive for loop for get all scenes and game objects
