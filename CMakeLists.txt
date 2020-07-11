@@ -162,25 +162,12 @@ else() # Not Web
     endif()
 
     if (WIN32)
-      set(SDL2_LIBRARY
-        "${CMAKE_SOURCE_DIR}/lib/win32/sdl/lib/x64/SDL2.lib"
-        )
-      set(SDL2MAIN_LIBRARY
-        "${CMAKE_SOURCE_DIR}/lib/win32/sdl/lib/x64/SDL2main.lib"
-        )
-      set(SDL2_INCLUDE_DIR
-        "${CMAKE_SOURCE_DIR}/lib/win32/sdl/include"
-        )
-      set(SDL2_IMAGE_LIBRARY
-        "${CMAKE_SOURCE_DIR}/lib/win32/sdl_image/lib/x64/SDL2_image.lib"
-        )
-      set(SDL2_IMAGE_INCLUDE_DIR
-        "${CMAKE_SOURCE_DIR}/lib/win32/sdl_image/include"
-        )
-       # target_link_libraries(main ${SDL_LIBRARY} ${SDL_IMAGE_LIBRARY})
-
-       # include_directories(${SDL_INCLUDE_DIR})
-
+        set(SDL2_LIBRARY "${CMAKE_SOURCE_DIR}/lib/win32/sdl/lib/x64/SDL2.lib")
+        set(SDL2MAIN_LIBRARY "${CMAKE_SOURCE_DIR}/lib/win32/sdl/lib/x64/SDL2main.lib")
+        set(SDL2_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/lib/win32/sdl/include")
+        set(SDL2_IMAGE_LIBRARY "${CMAKE_SOURCE_DIR}/lib/win32/sdl_image/lib/x64/SDL2_image.lib")
+        set(SDL2_IMAGE_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/lib/win32/sdl_image/include")
+        target_link_libraries(main ${SDL2MAIN_LIBRARY}) # for Visual Studio
     endif()
     find_package(SDL2 REQUIRED)
     find_package(SDL2_image REQUIRED)
@@ -188,7 +175,7 @@ else() # Not Web
     include_directories(${SDL2_INCLUDE_DIR})
     include_directories(${SDL2_IMAGE_INCLUDE_DIR})
 
-    target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} ${SDL2MAIN_LIBRARY})
+    target_link_libraries(main ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
 #------------------------------------------------------------------------------
 # Tests section
