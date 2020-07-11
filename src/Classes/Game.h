@@ -2,13 +2,17 @@
 #define ROGUE_SDL_GAME_H
 
 #include <iostream>
+#if defined(WIN32)
+#include <SDL.h>
+#include <SDL_image.h>
+#else
 #include <SDL2/SDL.h>
 #if defined(__APPLE__)
 #include <SDL2_image/SDL_image.h>
 #else
 #include <SDL2/SDL_image.h>
 #endif //__APPLE__
-
+#endif
 #if defined(__EMSCRIPTEN__)
 #include <emscripten.h>
 #define EMSCRIPTEN_FLAG 0;
