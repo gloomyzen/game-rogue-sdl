@@ -181,7 +181,7 @@ else() # Not Web
 # Tests section
 #------------------------------------------------------------------------------
 
-#enable_testing()
-#add_subdirectory(tests)
+enable_testing()
+add_subdirectory(tests)
 
 endif()
