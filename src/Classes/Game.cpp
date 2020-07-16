@@ -10,7 +10,6 @@ SDL_Rect Game::camera = {0,0, 800, 600};
 Manager manager;
 auto& player(manager.addEntity());
 auto& wall(manager.addEntity());
-int cnt = 0;
 
 enum groupLabels : std::size_t {
     groupWalls,

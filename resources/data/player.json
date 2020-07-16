@@ -1,0 +1,17 @@
+{
+  "skin": "default",
+  "name": "Tester",
+  "components": [
+    {
+      "TransformComponent": {
+        "position": [ 0.0, 0.0 ],
+        "size": [ 40, 60 ],
+        "scale": 3
+      },
+      "AnimationComponent": {
+        "image": "resources/sprites/RoguePlayer_48x48.png",
+        "isAnimated": true
+      }
+    }
+  ]
+}
