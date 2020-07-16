@@ -30,7 +30,7 @@ jobs:
       AUTO_CACHING: "1"
 
     steps:
-      - uses: mymindstorm/setup-emsdk@v4
+      - uses: mymindstorm/setup-emsdk@v6
 
       - name: Verify Emscripten
         run: emcc -v
