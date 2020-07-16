@@ -23,26 +23,7 @@ CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/ECS/TouchController.h
 CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/ECS/TransformComponent.h
 CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/Game.cpp
 CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/Game.h
-CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/GameObjects/GameObject.h
-CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/IObject.h
 CMakeFiles/main.dir/src/Classes/Game.cpp.o: ../src/Classes/TextureManager.h
-
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/DataTypes/Vector2D.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/Animation.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/CameraComponent.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/ColliderController.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/Collision.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/Components.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/ECS.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/KeyboardController.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/SpriteComponent.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/TouchController.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/ECS/TransformComponent.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/Game.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/GameObjects/GameObject.cpp
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/GameObjects/GameObject.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/IObject.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o: ../src/Classes/TextureManager.h
 
 CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o: ../src/Classes/Game.h
 CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o: ../src/Classes/TextureManager.cpp

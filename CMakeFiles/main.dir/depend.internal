@@ -24,25 +24,6 @@ CMakeFiles/main.dir/src/Classes/Game.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/TransformComponent.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.cpp
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/IObject.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.h
-CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/DataTypes/Vector2D.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Animation.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/CameraComponent.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ColliderController.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Collision.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Components.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/KeyboardController.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/SpriteComponent.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/TouchController.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/TransformComponent.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.cpp
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.h
- /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/IObject.h
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.h
 CMakeFiles/main.dir/src/Classes/TextureManager.cpp.o
  /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.h

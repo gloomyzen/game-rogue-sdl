@@ -248,33 +248,6 @@ src/Classes/Game.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/Game.cpp.s
 .PHONY : src/Classes/Game.cpp.s
 
-src/Classes/GameObjects/GameObject.o: src/Classes/GameObjects/GameObject.cpp.o
-
-.PHONY : src/Classes/GameObjects/GameObject.o
-
-# target to build an object file
-src/Classes/GameObjects/GameObject.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.o
-.PHONY : src/Classes/GameObjects/GameObject.cpp.o
-
-src/Classes/GameObjects/GameObject.i: src/Classes/GameObjects/GameObject.cpp.i
-
-.PHONY : src/Classes/GameObjects/GameObject.i
-
-# target to preprocess a source file
-src/Classes/GameObjects/GameObject.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.i
-.PHONY : src/Classes/GameObjects/GameObject.cpp.i
-
-src/Classes/GameObjects/GameObject.s: src/Classes/GameObjects/GameObject.cpp.s
-
-.PHONY : src/Classes/GameObjects/GameObject.s
-
-# target to generate assembly for a file
-src/Classes/GameObjects/GameObject.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Classes/GameObjects/GameObject.cpp.s
-.PHONY : src/Classes/GameObjects/GameObject.cpp.s
-
 src/Classes/TextureManager.o: src/Classes/TextureManager.cpp.o
 
 .PHONY : src/Classes/TextureManager.o
@@ -350,9 +323,6 @@ help:
 	@echo "... src/Classes/Game.o"
 	@echo "... src/Classes/Game.i"
 	@echo "... src/Classes/Game.s"
-	@echo "... src/Classes/GameObjects/GameObject.o"
-	@echo "... src/Classes/GameObjects/GameObject.i"
-	@echo "... src/Classes/GameObjects/GameObject.s"
 	@echo "... src/Classes/TextureManager.o"
 	@echo "... src/Classes/TextureManager.i"
 	@echo "... src/Classes/TextureManager.s"

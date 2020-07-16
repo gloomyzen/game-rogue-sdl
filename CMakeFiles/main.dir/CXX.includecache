@@ -139,11 +139,13 @@ ECS/Components.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Components.h
 ECS/Collision.h
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Collision.h
-GameObjects/GameObject.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.h
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.h
 iostream
+-
+SDL.h
+-
+SDL_image.h
 -
 SDL2/SDL.h
 -
@@ -153,26 +155,6 @@ SDL2/SDL_image.h
 -
 emscripten.h
 -
-
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.cpp
-GameObject.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.h
-../ECS/ECS.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.h
-../ECS/Components.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Components.h
-
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/GameObjects/GameObject.h
-../IObject.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/IObject.h
-../Game.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/Game.h
-../ECS/ECS.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/ECS.h
-../ECS/Components.h
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/ECS/Components.h
-
-/home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/IObject.h
 
 /home/runner/work/game-rogue-sdl/game-rogue-sdl/src/Classes/TextureManager.cpp
 TextureManager.h
