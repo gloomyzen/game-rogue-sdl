@@ -2,12 +2,10 @@
 #include "ECS/ECS.h"
 #include "ECS/Components.h"
 #include "ECS/Collision.h"
-#include "GameObjects/GameObject.h"
 
 SDL_Renderer* Game::renderer = nullptr;
 SDL_Event Game::event;
 SDL_Rect Game::camera = {0,0, 800, 600};
-GameObject test;
 
 Manager manager;
 auto& player(manager.addEntity());

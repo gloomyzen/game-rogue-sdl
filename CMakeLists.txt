@@ -13,7 +13,7 @@ add_executable(main
         src/Classes/Game.cpp
         src/main.cpp
         src/Classes/TextureManager.cpp
-        src/Classes/GameObjects/GameObject.cpp
+#        src/Classes/GameObjects/GameObject.cpp
 #        src/Scene.cpp
         src/Classes/DataTypes/Vector2D.cpp
         src/Classes/ECS/Collision.cpp
@@ -49,9 +49,9 @@ endif()
 # General dependencies.
 #------------------------------------------------------------------------------
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
-include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib/rapidjson/include
-)
+#include_directories(
+#        ${CMAKE_CURRENT_SOURCE_DIR}/lib/rapidjson/include
+#)
 
 #------------------------------------------------------------------------------
 # Detect emscripten is used.
@@ -161,6 +161,14 @@ else() # Not Web
 
     endif()
 
+    if (WIN32)
+        set(SDL2_LIBRARY "${CMAKE_SOURCE_DIR}/lib/win32/sdl/lib/x64/SDL2.lib")
+        set(SDL2MAIN_LIBRARY "${CMAKE_SOURCE_DIR}/lib/win32/sdl/lib/x64/SDL2main.lib")
+        set(SDL2_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/lib/win32/sdl/include")
+        set(SDL2_IMAGE_LIBRARY "${CMAKE_SOURCE_DIR}/lib/win32/sdl_image/lib/x64/SDL2_image.lib")
+        set(SDL2_IMAGE_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/lib/win32/sdl_image/include")
+        target_link_libraries(main ${SDL2MAIN_LIBRARY}) # for Visual Studio
+    endif()
     find_package(SDL2 REQUIRED)
     find_package(SDL2_image REQUIRED)
 

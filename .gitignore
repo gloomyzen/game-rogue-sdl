@@ -8,6 +8,7 @@
 *.DS_Store
 
 #Temp build folders
+out
 build
 cmake-build-*
 #temp folder for nginx
